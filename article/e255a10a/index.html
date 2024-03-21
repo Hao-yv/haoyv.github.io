@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="referrer" content="origin">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>
+        
+            计算机网络
+        
+    </title>
+    <link rel="shortcut icon" href="#"/>
+
+    <link type="text/css" rel="stylesheet" href="/font/LongCang.css">
+    <link type="text/css" rel="stylesheet" href="/font/Monda.css">
+    <link type="text/css" rel="stylesheet" href="/font/NotoSansSC.css">
+    <link type="text/css" rel="stylesheet" href="/font/NotoSerifSC.css">
+    <link type="text/css" rel="stylesheet" href="/font/Playball.css">
+    <link type="text/css" rel="stylesheet" href="/font/PTMono.css">
+    <link type="text/css" rel="stylesheet" href="/font/Roboto.css">
+    <link type="text/css" rel="stylesheet" href="/font/RobotoSlab.css">
+    <link type="text/css" rel="stylesheet" href="/font/Rosario.css">
+    <link type="text/css" rel="stylesheet" href="/font/UbuntuMono.css">
+
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/code.css">
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="BLog for Haoyv" type="application/atom+xml">
+</head>
+<body>
+    <a id="cover"></a>
+    <link type="text/css" rel="stylesheet" href="/css/post.css">
+<div id="header" class="header">
+    <div class="vertical">
+        <div class="inner">
+            
+                <h1 class="header-subtitle">计算机网络</h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2024-02-15
+                        </span>
+                        
+                            
+                                <span id="/article/e255a10a/" class="leancloud_visitors" data-flag-title="计算机网络">
+                                    <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                                </span>
+                            
+                            
+                                <span>
+                                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/article/e255a10a/"></span>
+                                </span>
+                              
+                        
+                    </p>
+                    
+                        
+                            <span class="category-color">网络</span>
+                        
+                    
+                    
+                        
+                            <span class="tag-color">网络</span>
+                        
+                            <span class="tag-color">期末</span>
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+    
+</div>
+<div id="container">
+    
+        <!-- 文章页面 -->
+        <div id="article">
+            <div class="toc"></div>
+            <div class="article-body">
+                <h1 id="第一章-nbsp-计算机网络概述"><a href="#第一章-nbsp-计算机网络概述" class="headerlink" title="第一章 &nbsp; 计算机网络概述"></a>第一章 &nbsp; 计算机网络概述</h1><ol>
+<li><p>计算机体系结构：计算机体系结构就是这个计算机网络及其部件所应完成的功能的精确定义。体系结构是抽象的，而显示则是具体的，是真正在运行的计算机硬件及软件。</p>
+<BR>
+</li>
+<li><p>分组交换：计算机网络主要采用分组交换技术，主要思想为“见机行事，尽可能向前发送报文分组”。当信息量较大时可能会造成<font color = #6495ED><strong>网络拥塞</strong></font></p>
+<BR>
+</li>
+<li><p>分组交换的主要优点 $\begin{cases}高效\灵活\迅速\可靠\end{cases}$</p>
+<BR>
+</li>
+<li><p>计算机网络分类(范围从小到大)$\begin{cases}局域网&amp;&amp;LAN\城域网&amp;&amp;MAN\广域网&amp;&amp;WAN\个人区域网&amp;&amp;PAN \end{cases}$</p>
+<BR>
+</li>
+<li><p>网络协议三要素：<font color = #6495ED ><strong>语法，语义，时序</strong></font></p>
+<br>
+</li>
+<li><p>数据在各层之间的传输过程示意图：<br><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy84MTgzMTcyLTZkYWU4OTdlNTc4MmQ0NDc?x-oss-process=image/format,png" alt="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy84MTgzMTcyLTZkYWU4OTdlNTc4MmQ0NDc?x-oss-process=image/format,png"></p>
+<br>
+</li>
+<li><p>三种体系结构示意图 ：<br> <img src="https://imgconvert.csdnimg.cn/aHR0cDovL3BpYy5ybWIuYmRzdGF0aWMuY29tLzcwZjQwNmMwOTNlNmQzOWMyNzZjYTllYmI5N2Y5MmQ5LnBuZ0B3bV8yLHRfNTVtKzVhNjI1WSszTCtXM3B1YUNvQT09LGZjX2ZmZmZmZixmZl9VMmx0U0dWcCxzel80Nix4XzI5LHlfMjk?x-oss-process=image/format,png" alt="https://imgconvert.csdnimg.cn/aHR0cDovL3BpYy5ybWIuYmRzdGF0aWMuY29tLzcwZjQwNmMwOTNlNmQzOWMyNzZjYTllYmI5N2Y5MmQ5LnBuZ0B3bV8yLHRfNTVtKzVhNjI1WSszTCtXM3B1YUNvQT09LGZjX2ZmZmZmZixmZl9VMmx0U0dWcCxzel80Nix4XzI5LHlfMjk?x-oss-process=image/format,png"></p>
+<br>
+</li>
+<li><p>五层协议各层功能:</p>
+<blockquote>
+<ul>
+<li><font color = #6495ED>应用层</font>：负责实现网络应用；</li>
+<li><font color = #6495ED>运输层</font>：负责主机中两个程序间的通讯；</li>
+<li><font color = #6495ED>网络层</font>：负责传送IP地址，实现端到端的运输；</li>
+<li><font color = #6495ED>数据链路层</font>：负责将资料组装成帧，并将其发往相邻节点；</li>
+<li><font color = #6495ED>物理层</font>：负责在物理线路上传输信号；</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h1 id="第二章-nbsp-物理层"><a href="#第二章-nbsp-物理层" class="headerlink" title="第二章 &nbsp; 物理层"></a>第二章 &nbsp; 物理层</h1><ol>
+<li>信道复用技术$\begin{cases}频分复用&amp;&amp;FDM\时分复用&amp;&amp;TDM\码分复用&amp;&amp;CDM\end{cases}$<br></li>
+<li>互联网接入技术$\begin{cases}电话网拨号接入\数字用户线接入\光纤同轴混合网接入\光纤接入\以太网接入\无线接入\end{cases}$<br></li>
+</ol>
+<hr>
+<h1 id="第三章-nbsp-数据链路层"><a href="#第三章-nbsp-数据链路层" class="headerlink" title="第三章 &nbsp; 数据链路层"></a>第三章 &nbsp; 数据链路层</h1><ol>
+<li>数据链路层三大基本任务：**<font color = #6495ED>封装成帧</font>，<font color = #6495ED>差错检测</font>, <font color = #6495ED>可靠传输</font>**<br></li>
+<li><font color = #6495ED>CSMA&#x2F;CD协议名词解释 </font>：<blockquote>
+<p>CSMA&#x2F;CD协议，即<font color = #6495ED>载波监听多址接入&#x2F;冲突避免</font>该协议在CSMA的基础上增加了一个<font color = #6495ED>冲突避免</font>功能，而没有实现冲突检测功能。由于不可能避免所有的冲突，且无线信道误码率较高，802.11标准还使用了数据链路层确认机制来保证数据被正确接收</p>
+</blockquote>
+</li>
+</ol>
+<br>
+
+
+<hr>
+<h1 id="第四章-nbsp-网络层"><a href="#第四章-nbsp-网络层" class="headerlink" title="第四章 &nbsp; 网络层"></a>第四章 &nbsp; 网络层</h1><ol>
+<li><p>数据报服务不可靠且无连接，尽最大努力交付</p>
+<br>
+</li>
+<li><p>虚电路网络是面向连接的可靠传输</p>
+<br>
+</li>
+<li><p><font color = #6495ED>虚电路名词解释：</font><br>虚电路表示这只是一条逻辑上的连接，分组都沿着这条逻辑连接按照存储转发方式传送，而不是真正建立了一个物理连接。电路交换的电话通信时线建立了一条真正的连接。因此分组交换的虚连接和电路交换的连接只是类似，并不是完全一样</p>
+<br>
+</li>
+<li><p><font color = #6495ED>数据报服务名词解释：</font><br>数据报服务是一种简单灵活的无连接的，尽最大努力交付的数据传输服务</p>
+<br></li>
+<li><p><font color =#FF0080>为什么网络选择数据报？</font></p>
+<blockquote>
+<ul>
+<li>网络的灵活性：数据报服务允许不同大小和类型的数据包在网络上以不同的路径独立传输，这使得网络更加灵活，能够适应各种需求。</li>
+<li>分布式路由：数据报服务允许每个数据包根据网络状态和目标地址自行选择最佳路由，而不需要预先建立连接或维护状态信息。这种分布式路由方式可以提高网络的效率和可靠性。</li>
+<li>高效的多路复用：数据报服务可以支持多个数据包同时在网络上传输，并且这些数据包可以独立处理，从而在网络资源利用方面更加高效。</li>
+<li>总的来说，数据报服务提供了一种灵活、高效和分布式的网络通信方式，适用于现代互联网中大量异构的设备和应用场景。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="6">
+<li><p>虚电路网络与数据报网络对比：</p>
+<table>
+<thead>
+<tr>
+<th align="center">对比方面</th>
+<th align="center">虚电路网络</th>
+<th align="center">数据报网络</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">思路</td>
+<td align="center">可靠通信应当由网络来保证</td>
+<td align="center">可靠通信应当由用户主机来保证</td>
+</tr>
+<tr>
+<td align="center">连接的建立</td>
+<td align="center">必须建立连接</td>
+<td align="center">不需要建立连接</td>
+</tr>
+<tr>
+<td align="center">终点地址</td>
+<td align="center">仅在连接建立阶段使用，每个分组使用短的虚电路号</td>
+<td align="center">每个分组都有终点的完整地址</td>
+</tr>
+<tr>
+<td align="center">分组的转发</td>
+<td align="center">属于同一条虚电路的分组均按照同一条路由进行转发</td>
+<td align="center">每个分组独立选择路由进行转发</td>
+</tr>
+<tr>
+<td align="center">当结点出现故障时</td>
+<td align="center">所有通过出故障的结点在虚电路中均不能工作</td>
+<td align="center">到达终点时不一定按照发送顺序</td>
+</tr>
+<tr>
+<td align="center">服务质量保证</td>
+<td align="center">可以将通信资源提前分配给每一个虚电路，因此较容易实现</td>
+<td align="center">较难实现</td>
+</tr>
+<tr>
+<td align="center"><br></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+</li>
+<li><p><font color =#FF0080>两种技术的发展趋势是什么？</p>
+<blockquote>
+<p></font><br>数据报网络在互联网中取得了巨大的成功，但作为互联网底底层物理网络的很多广域分组交换网却都是虚电路网络；随着互联网多媒体应用需求的迅速增长，如何让网络提供更好的服务质量愈加重要，虚电路技术有受到了重视。故二者发展趋势为相互借鉴，相互融合，并行发展</p>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="8">
+<li>点分十进制：<img src="https://img-blog.csdnimg.cn/20200304175445145.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N5emRldg==,size_16,color_FFFFFF,t_70" alt="https://img-blog.csdnimg.cn/20200304175445145.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N5emRldg==,size_16,color_FFFFFF,t_70"></li>
+</ol>
+<br>
+
+<ol start="9">
+<li><p>二级IP地址：</p>
+<blockquote>
+<p><strong><font color = #6495ED>IP地址 $\begin{matrix}::&#x3D;\end{matrix}\left { \left \langle 网络号 \right \rangle， \left \langle 主机号 \right \rangle   \right }$</font></strong></p>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="10">
+<li><p>IP地址中的网络号字段和主机号字段：<img src="https://www.biaodianfu.com/wp-content/uploads/2021/08/ip-class.png" alt="https://www.biaodianfu.com/wp-content/uploads/2021/08/ip-class.png"><br><br><img src="https://img-blog.csdnimg.cn/20200806145430497.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjA3NzU3,size_16,color_FFFFFF,t_70" alt="https://img-blog.csdnimg.cn/20200806145430497.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjA3NzU3,size_16,color_FFFFFF,t_70"></p>
+<br>
+</li>
+<li><p><c id='ip'> 三级IP地址：</p>
+<blockquote>
+<p><font color = #6495ED><strong>IP地址$\begin{matrix}::&#x3D;\end{matrix}\left { \left \langle 网络号 \right \rangle ，\left \langle 子网号 \right \rangle ，\left \langle 主机号 \right \rangle \right }$</strong></font></p>
+</blockquote>
+</li>
+<li><p>无分类的二级编址：</p>
+<blockquote>
+<p><font color = #6495ED><strong>IP地址$\begin{matrix}::&#x3D;\end{matrix}\left { \left \langle 网络前缀 \right \rangle \left \langle 主机号 \right \rangle \right }$</strong></font></p>
+</blockquote>
+</li>
+</ol>
+<BR>
+
+<ol start="13">
+<li><p><strong>IP地址计算和子网划分</strong>(还没写)</p>
+<br>
+</li>
+<li><p>互联网三大路由协议：<strong>RIP, OSPF, BGP</strong></p>
+<br>
+</li>
+<li><p><font color = #6495ED>最长前缀匹配名词解释：</font></p>
+<blockquote>
+<p>网络前缀越长，其地址块越小路由越具体，因而查找路由表时，应当从匹配结果中选择具有最长网络前缀的路由。最长网络匹配又称<font color = RED><strong>最长匹配</strong></font>或<font color = RED><strong>最佳匹配</strong></font><br><br></p>
+</blockquote>
+</li>
+<li><p><font color = #6495ED>VPN名词解释：</font></p>
+<blockquote>
+<p>又称“虚拟专用网”，利用公用的互联网作为各个专用网之间的通信载体实现不同专用网之间的相互通信<br><br></p>
+</blockquote>
+</li>
+<li><p><font color = #6495ED>NAT名词解释：</font></p>
+<blockquote>
+<p>又称“网络地址转换”，使大量内部专用地址的用户共享少量外部全球地址来访问互联网上的主机和资料。这种方法需要在专用网连接到互联网的路由器上运行NAT软件。运行NAT软件的路由器叫做NAT路由器，它至少有一个有效的外部全球地址$IP_{G}$。使所有使用本地地址的主机在和外界通信时都要在NAT路由器上将其本地地址转换成$IP_{G}$</p>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="18">
+<li>网络地址转换解决IP地址不足的问题<br></li>
+<li><font color =#FF0080>子网掩码如何划分？</font><blockquote>
+<p>从网络主机号中借用不定长的若干位作为子网号，主机号减少相应位数，两级IP地址变成了<a href="#ip">三级IP地址</a></p>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="20">
+<li><font color =#FF0080>地址块怎么写？</font><blockquote>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h1 id="第五章-nbsp-运输层"><a href="#第五章-nbsp-运输层" class="headerlink" title="第五章 &nbsp; 运输层"></a>第五章 &nbsp; 运输层</h1><ol>
+<li><p>用户数据报协议 (UDP)<br>传输控制协议 (TCP)</p>
+<br>
+</li>
+<li><p>UDP在数据传输之前<font color = #6495ED><strong>不需要建立连接</strong></font>.接收方正在受到UDP报文后，不需要做出任何确认。虽然UDP不提供可靠服务，但在某些情况下UDP是一种最有效的工作方式</p>
+<br>
+</li>
+<li><p>TCP<font color = #6495ED><strong>提供面向连接的服务</strong></font>，在数据传输之前必须先建立连接数据传输结束后要释放连接。TCP不提供广播或多播服务。由于TCP要提供可靠的、面向连接的运输服务，因此增加了在许多开销，不仅使得运输协议数据单元的首部增大很多，还要占用许多处理器资源</p>
+<br>
+</li>
+<li><p>端口是应用层与物理层之间接口的抽象，需要在运输层协议进行通信的进程，都需要与某个端口关联，端口号标志了应用进程所关联的端口，相当于应用进程的运输层地址。运输协议数据单元（即TCP报文段或UDP报文段）的首部必须包含两个字段<font color = RED><strong>源端口号</strong></font>和<font color = RED><strong>目的端口号</strong></font>.运输层收到IP层交上来的数据时，要根据其目的端口号来决定应当同过哪一个端口将其上交给目的的应用进程。</p>
+<br>
+</li>
+<li><p>端口号值仅具有本地意义，不同的计算机中相同的端口号没有联系</p>
+<br>
+</li>
+<li><p>端口号分类$\begin {cases}熟知端口号\登记端口号\动态端口号 \end{cases}$</p>
+<br>
+</li>
+<li><p><font color = #6495ED><strong>熟知端口号</strong></font>数值为 <font color = RED><strong>0 ~ 1023</strong> </font>这类端口号有IANA负责分配给一些常用的应用层程序固定使用，一种新的应用程序出现时若要获得一个熟知端口号，必须想IANA申请</p>
+<br>
+</li>
+<li><p><font color = #6495ED><strong>登记端口号</strong></font>数值为 <font color = RED><strong>1024 ~ 49151</strong></font> 这类端口号IANA不分配也不控制，但可以在IANA注册等级，防止重复使用</p>
+<br>
+</li>
+<li><p><font color = #6495ED><strong>动态端口号</strong></font>数值为 <font color = RED><strong>49152 ~ 465535</strong></font> 这类端口号留给客户进程选座临时端口号，仅供临时使用，用完释放，可以给其他进程使用</p>
+<br>
+</li>
+<li><p>TCP的连接建立采用客户 – 服务器的方式</p>
+<br>
+</li>
+<li><p>TCP建立连接的三次握手分别为：<font color = #6495ED ><strong>连接请求、接受请求、发送确认</strong></font></p>
+<br>
+</li>
+<li><p>三次握手示意图：<img src="https://img-blog.csdnimg.cn/6b7387af9a5d432d82cff543b1e519d0.png" alt="https://img-blog.csdnimg.cn/6b7387af9a5d432d82cff543b1e519d0.png"> </p>
+<br>
+</li>
+<li><p>TCP释放连接的四次挥手分别为：<font color = #6495ED ><strong>释放请求、接受请求、回应请求、确认释放</strong></font></p>
+<br>
+</li>
+<li><p>四次挥手示意图：<img src="https://pic1.zhimg.com/v2-3ac75609ec4f2bb895a44a2bbaafceef_r.jpg" alt="https://pic1.zhimg.com/v2-3ac75609ec4f2bb895a44a2bbaafceef_r.jpg"></p>
+<br>
+</li>
+<li><p>TCP的有限状态机：<img src="https://ts1.cn.mm.bing.net/th/id/R-C.0c44b08974246ca3e5f517c0e3aad8de?rik=nJEsN2uJ80vMnQ&riu=http://www.uml.org.cn/sysML/images/2020042222.png.jpg&ehk=CUTVzFcsryZMkQNreLUHwyqEgKaEbaK7C4BXvPhLyN0=&risl=&pid=ImgRaw&r=0" alt="https://ts1.cn.mm.bing.net/th/id/R-C.0c44b08974246ca3e5f517c0e3aad8de?rik=nJEsN2uJ80vMnQ&amp;riu=http%3a%2f%2fwww.uml.org.cn%2fsysML%2fimages%2f2020042222.png.jpg&amp;ehk=CUTVzFcsryZMkQNreLUHwyqEgKaEbaK7C4BXvPhLyN0%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0"></p>
+<br>
+</li>
+<li><p>当网络中出现太多分组时，网络的性能开始下降，就会造成<font color = RED ><strong>拥塞</strong></font></p>
+<br>
+</li>
+<li><p><font color = RED ><strong>拥塞控制</strong></font>就是防止过多的数据注入网络，使网络中的路由器或链路不致过载</p>
+<br>
+</li>
+<li><p>拥塞控制可以分为<font color = RED><strong>开环控制</strong></font>和<font color = RED><strong>闭环控制</strong></font>两大类。开环控制方法试图从良好的设计来解决问题，它的本质是从一开始就要保证问题不会发生。一旦系统启动并运行就不需要中途去做修正。闭环控制是一种基于反馈环路的方法，包括三部分（1）检测网络系统以便检测到拥塞在何时，何地发生；（2）把拥塞发生的信息传送到可以采取行动的地方；（3）调整网络系统的运行以解决出现的问题</p>
+<br>
+</li>
+<li><p>拥塞控制三种算法$\begin {cases}慢启动\拥塞避免\快速恢复 \end {cases}$</p>
+<br>
+</li>
+<li><p>较好的防止网络拥塞的方法是通过试探发现网络的可用带宽，即<font color = #6495ED ><strong>由小到大增大发送方的拥塞窗口数值，直到发生拥塞</strong></font>通畅在刚刚开始发送报文段是可先将拥塞窗口设置为一个MSS[^1]数值。而在每收到一个<font color = #6495ED ><strong>对新的报文段的确认</strong></font>后，将拥塞窗口增加至多一个MSS数值。用这样的方法逐步增大发送方的拥塞窗口cwnd，可以使分组注入网络的速率更加合理，这就是<font color = RED ><strong>慢启动算法</strong></font><br>[^1]: RFC 2581规定在一开始cwnd应设置为不超过2 * MSS字节，并且在一开始不能超过两个报文段。为简化语法将cwnd设置为一个MSS</p>
+</li>
+</ol>
+ <br>
+
+<ol start="21">
+<li><p>慢启动阶段发送速率以质数方式增长，若发送速率持续以该速率增长，则网络必然很快进入拥塞状态。当网络接近拥塞时，应降低发送速率的增长速率。TCP定义了<font color = #6495ED ><strong>慢启动门限</strong></font>ssthresh（即从慢启动进入拥塞避免阶段的门限），超过慢启动阶段就进行拥塞避免</p>
+<br>
+</li>
+<li><p>慢启动门限用法如下：</p>
+<blockquote>
+<pre><code>    当 cwnd &lt; ssthresh 时，使用慢启动算法；
+    当 cwnd = ssthresh 时，即可使用慢启动算法，也可使用拥塞避免算法
+    当 cwnd &gt; ssthresh 时，停止使用慢启动算法而改用拥塞避免算法
+</code></pre>
+<p>&emsp;&emsp;每收到一个新的确认信息，将cwnd(以字节为单位)增加 $MSS \times (MSS; &#x2F; ; cwnd)$ 字节<br><br></p>
+</blockquote>
+</li>
+<li><p>无论是慢启动阶段还是拥塞避免阶段，发送方只要发现网络出现故障（检测到分组丢失），就会立即将拥塞窗口的 <strong>cwnd</strong> 重新设置为1，并执行慢启动算法。同时将慢启动门限<font color = #6495ED ><strong>ssthresh</strong></font>设置为<font color = RED><strong>出现拥塞时的发送窗口大小</strong></font>（即接收方窗口和拥塞窗口中数值较小的一个）<font color = RED><strong>的一半</strong></font>（但不能小于2）</p>
+<br>
+</li>
+<li><p>执行<font color = #6495ED ><strong>拥塞避免</strong></font>算法后，拥塞窗口呈线性增长，发送塑料布比较缓慢，以防网络过早出现拥塞，并使发送方可以长时间保持一个合理的发送速率。拥塞避免并不能避免拥塞，而是说把拥塞窗口控制为按线性规律增长，<font color = #6495ED ><strong>使网络不容易出现拥塞</strong></font></p>
+<br>
+</li>
+<li><p>慢启动算法和拥塞避免算法的实现：<img src="https://i.loli.net/2019/07/23/5d36acc7595ca77662.png" alt="https://i.loli.net/2019/07/23/5d36acc7595ca77662.png"> </p>
+<br>
+</li>
+<li><p>为解决发送方经过很长时间才能恢复正常的传输速率的问题 RFC 2581 定义了与快速重传配套使用的<font color = #6495ED ><strong>快速恢复</strong></font>算法，具体步骤如下：</p>
+<blockquote>
+<p>（1）发丝不过方收到连续三个重复的ACK后，就重新设置慢启动门限ssthresh，将其设置为当前发送窗口大小的一半。这点与慢启动算法相同<br>（2）与慢启动算法的不同之处时拥塞窗口的cwnd不是<strong>1</strong>，而是设置为新的慢启动门限ssthresh[^2]，然后开始执行拥塞避免算法，使拥塞窗口缓慢地线性增长<br><br></p>
+</blockquote>
+</li>
+<li><p><strong>加性增和乘性减(AIMD)：</strong></p>
+<blockquote>
+<ul>
+<li>经过慢启动发送方迅速进入拥塞避免状态，该阶段使拥塞窗口呈线性增长，发送速率缓慢增长，以防止网络过早出现拥塞。称为“<font color = #6495ED ><strong>加性增</strong></font>”</li>
+<li>当流量逐渐超过网络可用宽带时会出现拥塞，但由于发送速率增长缓慢，通常仅导致少量分组丢失。这种情况下发送方会受到三个重复的ACK并将拥塞窗口减半，即<font color = #6495ED ><strong>乘性减</strong></font>，然后在继续执行“加性增”</li>
+<li>在这种 “加性增，乘性减” 的拥塞控制下，发送方的平均发送速率始终保持在比较接近网络可用宽带的位置（慢启动门限之上）</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<p>[^2]: 有的快速恢复实现是把拥塞窗口设置为：$ssthresh+ 3\times MSS$</p>
+<ol start="28">
+<li>对接受到3个重复ACK和超时事件的不同处理：<img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.l3YOmpY3OsHNlVV_sdyy1gHaDR?rs=1&pid=ImgDetMain" alt="https://tse3-mm.cn.bing.net/th/id/OIP-C.l3YOmpY3OsHNlVV_sdyy1gHaDR?rs=1&amp;pid=ImgDetMain"><br></li>
+</ol>
+<hr>
+<h1 id="第六章-nbsp-应用层"><a href="#第六章-nbsp-应用层" class="headerlink" title="第六章 &nbsp; 应用层"></a>第六章 &nbsp; 应用层</h1><ol>
+<li><p>万维网四大关键技术$\begin {cases}统一资源标识符&amp;&amp;URL\超文本传输协议&amp;&amp;HTTP\超文本标记语言&amp;&amp;HTML\搜索引擎 \end {cases}$</p>
+<br>
+</li>
+<li><p><font color = #6495ED ><strong>C&#x2F;S体系结构名词解释</strong></font>：</p>
+<blockquote>
+<p>客户&#x2F;服务器体系协议结构包括一个总是运行着的服务器程序和许多有时运行的客户程序。客户进程是服务请求方，服务器进程是服务提供方。该体系结构的另一个特征为：服务器进程总是处于运行状态，并等待客户进程的服务请求。服务器进程具有固定的端口号，而运行服务器的主机也具有固定的IP地址</p>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="3">
+<li><p><font color = #6495ED ><strong>P2P体系结构名词解释</strong></font>：</p>
+<blockquote>
+<p> 对等体系结构中没有固定的服务请求者和服务提供者，分布在网络中的应用进程是对等的，被成为对等方（有时将运行对等方软件的计算机也成为对等方）。对等方相互直接通信，每个对等方<font color = RED ><strong>即是服务的请求这，又是服务的提供者</strong></font></p>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="4">
+<li>应用层协议定义了运行在不同端系统上的应用进程间为实现特定应用而相互通信的规则<blockquote>
+<ul>
+<li>交换报文的报文类型，入请求报文和相应报文</li>
+<li>各种报文类型的语法，入报文中的各个字段及其详细描述</li>
+<li>字段的语义，即包含在字段中的信息的含义</li>
+<li>进程何时，如何发送报文及对报文进程相应的规则</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="5">
+<li><p>域名系统实现计算机名到IP地址的转换，域名到<strong>IP</strong>地址的转换是由若干域名服务器程序完成的，<strong>IP</strong>地址的转换过程叫做<font color = #6495ED ><strong>域名解析</strong></font>。域名服务器程序在专设的主机上运行，运行该程序的主机成为<font color = #6495ED ><strong>域名服务器</strong></font></p>
+<br>
+</li>
+<li><p>顶级域名(TLD)$\begin {cases}国家或地区顶级域名&amp;&amp;nTLD\通用顶级域名&amp;&amp;gTLD\反向域&amp;&amp;arpa \end {cases}$</p>
+<blockquote>
+<ul>
+<li>国家或地区顶级域名采用 ISO 3166 的规定。例如，cn 表示中国， us表示美国<br></li>
+<li>最常见的顶级通用域名有7个：com（公司企业）、net（网络服务机构）、org（非盈利性组织）、int（国际组合）、edu（教育机构）、gov（政府部门）、mil（军事部门）<br></li>
+<li>反向域用于反向域名解析，将IP地址反向解析为域名</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="7">
+<li>二级域名$\begin {cases}列别域名\\行政区域名 \end {cases}$<blockquote>
+<ul>
+<li>类别域名有7个：ac(科研机构)、com(工、商、金融等企业)、edu(教育机构)、 gov(政府部门)、net(提供网络服务的机构)、mil(军事机构)和org(非盈利性部门组织)<br>  </li>
+<li>类别域名和顶级域名不要重复使用<br></li>
+<li>行政区域名34个，使用与我国各省、自治区、直辖市。例如：bj 表示北京、sh 表示上海等。特别的tw（台湾）、hk（香港）为顶级域名</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="8">
+<li><p>域名长度一般为四级，三级以后的域名由各单位自行划分，不在同一划分</p>
+<br>
+</li>
+<li><p>互联网名字空间结构：<img src="https://imgconvert.csdnimg.cn/aHR0cDovL29zcy5vdWNobi5jbi96b25nYnVrZWNoZW5nZ2Fpei8xNjI3ODUvbW9kX3BhZ2UvY29udGVudC8xMy80LTQtMi5wbmc?x-oss-process=image/format,png" alt="https://imgconvert.csdnimg.cn/aHR0cDovL29zcy5vdWNobi5jbi96b25nYnVrZWNoZW5nZ2Fpei8xNjI3ODUvbW9kX3BhZ2UvY29udGVudC8xMy80LTQtMi5wbmc?x-oss-process=image/format,png"></p>
+<br>
+</li>
+<li><p>域名服务器$\begin {cases}根域名服务器\顶级域名服务器\权威域名服务器 \end {cases}$<br><br>域名服务器解析域名本质是<font color = RED>查找映射表</font></p>
+<br>
+</li>
+<li><p>DNS域名服务器的等级结构：<img src="https://note.youdao.com/yws/public/resource/1b080717be56529ad098c626d3450143/xmlnote/187107594E6A4AACB1584F755420A939/32605" alt="https://note.youdao.com/yws/public/resource/1b080717be56529ad098c626d3450143/xmlnote/187107594E6A4AACB1584F755420A939/32605"></p>
+</li>
+</ol>
+<hr>
+<h1 id="第七章-nbsp-网络安全"><a href="#第七章-nbsp-网络安全" class="headerlink" title="第七章 &nbsp; 网络安全"></a>第七章 &nbsp; 网络安全</h1><ol>
+<li><p>安全威胁$\begin {cases} 被动攻击 \begin {cases}窃听\\流量分析 \end {cases}\\主动攻击：其他\end {cases}$</p>
+<br>
+</li>
+<li><p>网络通信对应的四种攻击形式：</p>
+<blockquote>
+<ul>
+<li>截断 (Interception)：攻击者从网络上窃听他人的通信内容</li>
+<li>中断(Interruption): 攻击者有意中断他人在网络上的通信</li>
+<li>篡改(Modification): 攻击这故意篡改网络上传送的报文</li>
+<li>伪造(Fabrication): 攻击者伪造信息在网络上传送</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="3">
+<li>恶意程序$\begin {cases}病毒&amp;非独立文件，需要依附于宿主\蠕虫&amp;独立文件\木马&amp;伪装应用\逻辑炸弹&amp;需要满足特殊条件 \end {cases}$<blockquote>
+<p><font color = RED ><strong>计算机病毒</strong></font>是一种会传染其他程序的程序，通过修改其他程序把自身或其变种复制进去完成传染<br><br><br><font color = RED ><strong>计算机蠕虫</strong></font>是一种通过网络的通信功能主动将自身从一个结点发送到另一个结点并启动的程序<br><br><br> <font color = RED ><strong>特洛伊木马</strong></font>是一种在便面功能掩护下执行非授权功能的程序<br> <br><br> <font color = RED ><strong>逻辑炸弹</strong></font>是一种当运行环境满足某种特定条件时执行其他功能的程序</p>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="4">
+<li>安全服务$\begin {cases}机密性&amp;Confidentiality\报文完整性&amp;Message;Integrity\不可否认性&amp;Nonrepudiation\实体鉴别&amp;Entity;Authentication\访问控制&amp;Access;Contril\可用性&amp;Availability \end {cases}$<blockquote>
+<p> <font color =  GREEN  ><strong>机密性(Confidentiality)</strong></font>：确保计算机系统中的信息或网络中传输的信息不会泄露给非授权用户<br> <br><br> <font color =  GREEN  ><strong>报文完整性(Message)</strong></font>：确保计算机系统中的信息或网络传输中的信息不被非授权用户篡改或伪造<br> <br><br> <font color =  GREEN  ><strong>不可否认性(Nonrepudiation)</strong></font>：防止发送方或接收方否认发送或接收过某信息<br> <br><br> <font color =  GREEN  ><strong>实体鉴别(Entity)</strong></font>：通信实体能够验证正在通信的对端实体的真是身份，确保不会与冒充者通信。与授权是不同的概念，授权设计的问题是：实体的行为是否被允许<br> <br><br> <font color =  GREEN  ><strong>访问控制(Access)</strong></font>：系统具有限制和控制不哦她那个实体对信息源或其他系统资源进行访问的能力。系统必须在鉴别实体身份的基础上对实体访问的权限进行控制<br> <br><br> <font color = GREEN ><strong>可用性(Availability)</strong></font>：确保授权用户能够正常访问系统或资源</p>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="5">
+<li><p><font color = #6495ED ><strong>对称密钥密码体制名词解释</strong></font>: </p>
+<blockquote>
+<p>对称密钥密码体制是一种加密密钥和解密密钥相同的密码体制，两个参与者共享同一个秘密密钥，如果用一个特定的密钥加密一套信息，就必须要用相同的密钥来解密该信息。该系统又称对称<font color = #6495ED ><strong>密钥系统</strong></font></p>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<ol start="6">
+<li><p><font color = #6495ED ><strong>公钥密码体制名词解释</strong></font>：</p>
+<blockquote>
+<ul>
+<li>公钥密码体制使用不同的加密密钥与解密密钥，加密密钥（<font color = #6495ED ><strong>公钥</strong></font>）PK是公开信息，而解密密钥（<font color = #6495ED ><strong>私钥</strong></font>）SK是需要保密的。</li>
+<li>私钥SK由公钥PK决定，但不能由PK算出SK</li>
+</ul>
+</blockquote>
+</li>
+<li><p>数字签名用于证明数据的出处和真实性，需保证以下三点：</p>
+<blockquote>
+<ul>
+<li>接收方能够核实发送方对报文的数字签名</li>
+<li>发送方事后不能抵赖对报文的数字签名</li>
+<li>任何人包括接收方都不能伪造对报文的签名</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<br>
+
+<hr>
+<h1 id="名词对照表"><a href="#名词对照表" class="headerlink" title=" 名词对照表"></a><font color = #8A2BE2> <strong>名词对照表</strong></font></h1><p>|:–:|:–|:–|:–|:–|:–|<br>|LAN|局域网|TDM|时分复用|CRC|循环冗余校验|<br>|MAN|城域网|CDM|码分复用|PPP|点对点协议|<br>|WAN|广域网|FDM|频分复用|CSMA&#x2F;CD|载波监听，多路访问&#x2F;冲突检测|<br>|PAN|个人区域网|WDM|波分复用|CSMA&#x2F;CA|载波监听，多路访问&#x2F;冲突避免|<br>|ICMP|网络控制报文协议|URL|统一资源标记定位符|VAT|虚拟地址转换|<br>|TCP|传输控制协议|SMTP|简单邮件传输协议|DOS|拒绝服务|<br>|UDP|用户数据报协议|ADSL|非对称数字用户线路|DDOS|分布式拒绝服务|<br>|HTTP|超文本传输协议|HFC|混合光纤同轴电缆|RTT|往返延时|<br>|HTML|超文本标记语言|VPN|虚拟专用网络|</p>
+<br>
+
+<h1 id="名词解释"><a href="#名词解释" class="headerlink" title="  名词解释"></a><font color = #8A2BE2>  <strong>名词解释</strong></font></h1><h2 id="CSMA-CA协议名词解释"><a href="#CSMA-CA协议名词解释" class="headerlink" title="CSMA&#x2F;CA协议名词解释 "></a><font color = #6495ED>CSMA&#x2F;CA协议名词解释 </font></h2><blockquote>
+<p>CSMA&#x2F;CD协议，即<font color = #6495ED>载波监听多址接入&#x2F;冲突避免</font>该协议在CSMA的基础上增加了一个<font color = #6495ED>冲突避免</font>功能，而没有实现冲突检测功能。由于不可能避免所有的冲突，且无线信道误码率较高，802.11标准还使用了数据链路层确认机制来保证数据被正确接收</p>
+</blockquote>
+<h2 id="虚电路名词解释"><a href="#虚电路名词解释" class="headerlink" title="虚电路名词解释"></a><font color = #6495ED>虚电路名词解释</font></h2><blockquote>
+<p>虚电路表示这只是一条逻辑上的连接，分组都沿着这条逻辑连接按照存储转发方式传送，而不是真正建立了一个物理连接。电路交换的电话通信时线建立了一条真正的连接。因此分组交换的虚连接和电路交换的连接只是类似，并不是完全一样</p>
+</blockquote>
+<h2 id="数据报服务名词解释"><a href="#数据报服务名词解释" class="headerlink" title="数据报服务名词解释"></a><font color = #6495ED>数据报服务名词解释</font></h2><blockquote>
+<p>数据报服务是一种简单灵活的无连接的，尽最大努力交付的数据传输服务</p>
+</blockquote>
+<h2 id="最长前缀匹配名词解释"><a href="#最长前缀匹配名词解释" class="headerlink" title="最长前缀匹配名词解释"></a><font color = #6495ED>最长前缀匹配名词解释</font></h2><blockquote>
+<p>网络前缀越长，其地址块越小路由越具体，因而查找路由表时，应当从匹配结果中选择具有最长网络前缀的路由。最长网络匹配又称<font color = RED><strong>最长匹配</strong></font>或<font color = RED><strong>最佳匹配</strong></font></p>
+</blockquote>
+<h2 id="VPN名词解释"><a href="#VPN名词解释" class="headerlink" title="VPN名词解释"></a><font color = #6495ED>VPN名词解释</font></h2><blockquote>
+<p>又称“虚拟专用网”，利用公用的互联网作为各个专用网之间的通信载体实现不同专用网之间的相互通信</p>
+</blockquote>
+<h2 id="C-S体系结构名词解释"><a href="#C-S体系结构名词解释" class="headerlink" title="C&#x2F;S体系结构名词解释"></a><font color = #6495ED ><strong>C&#x2F;S体系结构名词解释</strong></font></h2><blockquote>
+<p>客户&#x2F;服务器体系协议结构包括一个总是运行着的服务器程序和许多有时运行的客户程序。客户进程是服务请求方，服务器进程是服务提供方。该体系结构的另一个特征为：服务器进程总是处于运行状态，并等待客户进程的服务请求。服务器进程具有固定的端口号，而运行服务器的主机也具有固定的IP地址</p>
+</blockquote>
+<h2 id="P2P体系结构名词解释"><a href="#P2P体系结构名词解释" class="headerlink" title="P2P体系结构名词解释"></a><font color = #6495ED ><strong>P2P体系结构名词解释</strong></font></h2><blockquote>
+<p>  对等体系结构中没有固定的服务请求者和服务提供者，分布在网络中的应用进程是对等的，被成为对等方（有时将运行对等方软件的计算机也成为对等方）。对等方相互直接通信，每个对等方<font color = RED ><strong>即是服务的请求者，又是服务的提供者</strong></font></p>
+</blockquote>
+<h2 id="NAT名词解释："><a href="#NAT名词解释：" class="headerlink" title="NAT名词解释："></a><font color = #6495ED>NAT名词解释：</font></h2><blockquote>
+<p>又称“网络地址转换”，使大量内部专用地址的用户共享少量外部全球地址来访问互联网上的主机和资料。这种方法需要在专用网连接到互联网的路由器上运行NAT软件。运行NAT软件的路由器叫做NAT路由器，它至少有一个有效的外部全球地址$IP_{G}$。使所有使用本地地址的主机在和外界通信时都要在NAT路由器上将其本地地址转换成$IP_{G}$</p>
+</blockquote>
+<h2 id="对称密钥密码体制名词解释"><a href="#对称密钥密码体制名词解释" class="headerlink" title="对称密钥密码体制名词解释:"></a><font color = #6495ED ><strong>对称密钥密码体制名词解释</strong></font>:</h2><blockquote>
+<p>对称密钥密码体制是一种加密密钥和解密密钥相同的密码体制，两个参与者共享同一个秘密密钥，如果用一个特定的密钥加密一套信息，就必须要用相同的密钥来解密该信息。该系统又称对称<font color = #6495ED ><strong>密钥系统</strong></font></p>
+</blockquote>
+<h2 id="公钥密码体制名词解释："><a href="#公钥密码体制名词解释：" class="headerlink" title="公钥密码体制名词解释："></a><font color = #6495ED ><strong>公钥密码体制名词解释</strong></font>：</h2><blockquote>
+<ul>
+<li>公钥密码体制使用不同的加密密钥与解密密钥，加密密钥（<font color = #6495ED ><strong>公钥</strong></font>）PK是公开信息，而解密密钥（<font color = #6495ED ><strong>私钥</strong></font>）SK是需要保密的。</li>
+<li>私钥SK由公钥PK决定，但不能由PK算出SK</li>
+</ul>
+</blockquote>
+
+                
+                <p class="end">__END__</p>
+            </div>
+            <div class="article-footer">
+                <div class="suffix-box">
+    <div class="suffix-box-left">
+        <img src="/image/sidebar/avatar.jpg" alt="BLog for Haoyv">
+    </div>
+    <div class="suffix-box-right">
+        <span class="suffix-box-title">文章作者：</span>BLog for Haoyv
+        <br>
+        <span class="suffix-box-title">文章出处：</span><a href="/article/e255a10a/" target="_blank">计算机网络</a>
+        <br>
+        <span class="suffix-box-title">作者签名：</span>简单地活着, 肆意又精彩.
+        <br>
+        <span class="suffix-box-title">关于主题：</span><a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - Live For Code</a>
+        <br>
+        <span class="suffix-box-title">版权声明：</span>文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+        <br>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+                
+                    <div class="category">
+                        分类：
+                        
+                            <a href="/category/%E7%BD%91%E7%BB%9C/">网络</a>
+                        
+                    </div>
+                
+                
+                    <div class="tag">
+                        标签：
+                        
+                            <a href="/tag/%E7%BD%91%E7%BB%9C/">网络</a>
+                        
+                            <a href="/tag/%E6%9C%9F%E6%9C%AB/">期末</a>
+                        
+                    </div>
+                
+                <div class="article-prev-next">
+                    
+                        <a href="/article/c88f20d/" class="prev-prefix">« </a> 上一篇：    <a href="/article/c88f20d/" title="发布于 2024-02-17 09:25">SQL文档</a>
+                        <br>
+                    
+                    
+                        <a href="/article/18136/" class="next-prefix">» </a> 下一篇：    <a href="/article/18136/" title="发布于 2024-02-14 11:23">MarkDown基本语法</a>
+                    
+                </div>
+            </div>
+            
+    <div class="article-comments">
+        
+            <div class="comments-title">
+                评论列表
+            </div>
+        
+        <div class="comments-content"></div>
+    </div>
+    
+ 
+        </div>
+    
+</div>
+    <div id="footer">
+    <div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>【人生若只如初见<span><i class='iconfont icon-like-fill'></i></span>何事秋风悲画扇】</div><div>&copy; 2020-2023 WorstOne. All Rights Reserved.</div>
+</div>
+    <div id="sidebar">
+    <div class="menu-wrap" style="display:none;">
+        
+            <div class="menu-notice">
+                <span class="iconfont icon-notice"></span>
+                <div class="notice">
+                    <span>简单地活着，肆意而又精彩！</span>
+                </div>
+            </div>
+        
+        <nav class="menu">
+            <div class="menu-introduce"> 
+                <div class="introduce-avatar">
+                    <img src="/image/sidebar/avatar.jpg">
+                </div> 
+                <div class="introduce-info"> 
+                    <div class="introduce-user">
+                        
+                            <a href="https://haoyv.site" target="_blank"><span>BLog for Haoyv</span></a>
+                        
+                    </div>
+                </div> 
+            </div> 
+            <div class="menu-list">
+                <ul>
+                    
+                        <li class=""><a href="/" class="" target="_self"><span class="iconfont icon-home-fill"></span>首页</a></li>
+                    
+                        <li class=""><a href="/category" class="" target="_self"><span class="iconfont icon-folder-fill"></span>分类</a></li>
+                    
+                        <li class=""><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
+                    
+                        <li class=""><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
+                    
+                        <li class=""><a href="/donate" class="" target="_self"><span class="iconfont icon-heart-fill"></span>赞赏</a></li>
+                    
+                        <li class=""><a href="/about" class="" target="_self"><span class="iconfont icon-about-fill"></span>关于</a></li>
+                    
+                        <li class=""><a href="/atom.xml" class="" target="_blank"><span class="iconfont icon-rss"></span>订阅</a></li>
+                    
+                        <li class=""><a href="javascript:;" class="search" target="_self"><span class="iconfont icon-search-menu"></span>搜索</a></li>
+                    
+                        <li class=""><a href="/comment" class="" target="_self"><span class="iconfont icon-comments-fill"></span>留言板</a></li>
+                    
+                        <li class=""><a href="/friend" class="" target="_self"><span class="iconfont icon-link"></span>友情链接</a></li>
+                    
+                </ul> 
+            </div> 
+            <div class="menu-link">
+                <div class="box">
+                    <div class="image-box"></div>
+                </div>
+                
+                    <a name="知乎" href="https://www.zhihu.com/people/3ppcet" class="" target="_blank" data=""><span class="iconfont icon-zhihu"></span></a>
+                
+                    <a name="微博" href="https://weibo.com/u/7903342994" class="" target="_blank" data=""><span class="iconfont icon-weibo"></span></a>
+                
+                    <a name="QQ" href="javascript:;" class="image" target="_self" data="/image/sidebar/qq.png"><span class="iconfont icon-qq"></span></a>
+                
+                    <a name="微信" href="javascript:;" class="" target="_self" data=""><span class="iconfont icon-wechat"></span></a>
+                
+                    <a name="GitHub" href="https://github.com/Hao-yv" class="" target="_blank" data=""><span class="iconfont icon-github"></span></a>
+                
+            </div> 
+        </nav>
+        <button class="menu-button-close"></button>
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+            </svg>
+        </div>
+    </div>
+    <button class="menu-button-open">MENU</button>
+    <div class="menu-cover"></div>
+</div>
+    <link type="text/css" rel="stylesheet" href="/css/search.css">
+<script type="text/javascript" src="/js/iscroll.js"></script>
+<script type="text/javascript" src="/js/instantsearch.min.js"></script>
+<div class="search-window">
+    <div class="search-content">
+        <div class="search-content-icon">
+            <i class="iconfont icon-search"></i>
+        </div>
+        <div id="search-input" class="search-input"></div>
+    </div>
+
+    <div class="search-scroll">
+        <div class="search-result">
+            <div id="search-stats" class="search-stats"></div>
+            <div id="search-hits"></div>
+            <div id="search-pagination" class="search-pagination"></div>
+        </div>
+    </div>
+
+    <span class="search-close-icon">
+        <i class="iconfont icon-close"></i>
+    </span>
+</div>
+    <div id="tools">
+    <div class="progressbar-top"></div>
+    
+    <link type="text/css" rel="stylesheet" href="/css/APlayer.css">
+    <script type="text/javascript" src="/js/APlayer.min.js"></script>
+    <script type="text/javascript" src="/js/Meting.min.js"></script>
+    <script>
+        var meting_api = 'https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+    </script>
+    <meting-js id="9301661017" lrcshow="false" server="netease" type="playlist" fixed="true" autoplay="false" loop="all" order="random" preload="auto" volume="0.67" mutex="true"></meting-js>
+
+    <div class="wrap-right">
+    <div class="wrap-right-hide">
+         <div class="wrap-right-button favorites">
+            <div class="iconbox" switch="false">
+                <span class="iconfont icon-favorites"></span>
+            </div>
+            <span class="icontext">关注</span>
+         </div>
+        <div class="wrap-right-button search">
+            <div class="iconbox">
+                <span class="iconfont icon-search-menu"></span>
+            </div>
+            <span class="icontext">搜索</span>
+        </div>
+        <div class="wrap-right-button menu-button">
+            <div class="iconbox">
+                <span class="iconfont icon-menu"></span>
+            </div>
+            <span class="icontext">菜单</span>
+        </div>
+        <div class="wrap-right-button mode">
+            <div class="light">
+                <div class="iconbox">
+                    <span class="iconfont icon-daymode"></span>
+                </div>
+                <span class="icontext">浅色模式</span>
+            </div>
+            <div class="dark">
+                <div class="iconbox">
+                    <span class="iconfont icon-nightmode-fill"></span>
+                </div>
+                <span class="icontext">深色模式</span>
+            </div>
+        </div>
+        <div class="wrap-right-button bottom">
+            <div class="iconbox">
+                <span class="iconfont icon-top"></span>
+            </div>
+            <span class="icontext">跳至底部</span>
+        </div>
+    </div>
+    <div class="wrap-right-show">
+        <div class="wrap-right-button set">
+            <div class="iconbox">
+                <span class="iconfont icon-setting"></span>
+            </div>
+            <span class="icontext">设置</span>
+        </div>
+        <div class="wrap-right-button top">
+            <div class="iconbox">
+                <span class="iconfont icon-top"></span>
+            </div>
+            <span class="icontext">返回顶部</span>
+        </div>
+    </div>
+</div>
+    <div class="loading"></div>
+</div>
+    <script>
+    window.config = {
+        GitHubUserName     : "Hao-yv",
+        GitHubRepositories : "Hexo-LiveForCode",
+
+        User             : "BLog for Haoyv",
+        UserAvatar       : "/image/sidebar/avatar.jpg",
+        WebsiteStartDate : "2024-02-14",
+        Home             : "https://haoyv.site",
+
+        WebsiteTitleBlur         : "Hi, Live For Code",
+        WebsiteTitleBlurTimeOut  : 500,
+        WebsiteTitleFocus        : "欢迎回来!",
+        WebsiteTitleFocusTimeOut : 1000,
+        WebsiteFavicon           : {
+            light : "/image/website/logo/logo.png",
+            dark  : "/image/website/logo/logo-dark.png"
+        },
+
+        ProgressBar : {
+            id       : "topProgressBar",
+            color    : "#77B6FF",
+            height   : "2px",
+            duration : 0.2
+        },
+
+        Loading: {
+            rebound : {
+                tension  : 16,
+                friction : 5
+            },
+            spinner : {
+                id     : "spinner",
+                radius : 90,
+                sides  : 3,
+                depth  : 4,
+                colors : {
+                    background : "#F0F0F0",
+                    stroke     : "#272633",
+                    base       : "",
+                    child      : "#272633"
+                },
+                alwaysForward : true,
+                restAt        : 0.5,
+                renderBase    : false
+            }
+        },
+
+        HomeHeaderAnimationRendered : true,
+        HomeHeaderAnimation         : {
+            radius      : 15,
+            density     : 0.2,
+            color       : "rgba(255, 255, 255, .2)",
+            clearOffset : 0.3
+        },
+
+        BackAnimationRendered          : true,
+        IEBrowserBackAnimationRendered : false,
+        BackAnimation                  : {
+            colorSaturation  : "60%",
+            colorBrightness  : "50%",
+            colorAlpha       : 0.5,
+            colorCycleSpeed  : 5,
+            verticalPosition : "random",
+            horizontalSpeed  : 200,
+            ribbonCount      : 3,
+            strokeSize       : 0,
+            parallaxAmount   : -0.2,
+            animateSections  : true
+        },
+
+        HomeHeaderImage : [
+            
+                "/image/header/home.jpg",
+            
+                "/image/header/back.jpg",
+            
+        ],
+        HomeBannerText  : "",
+
+        ArticleHeaderImage : [
+            
+                "/image/header/article.jpg",
+            
+        ],
+
+        OtherBannerText : "",
+
+        Error : {
+            icon    : "icon-swimming",
+            title   : "PAGE NOT FOUND",
+            content : [
+                
+                    "很抱歉，您访问的页面不存在！",
+                
+                    "可能是输入地址有误或该地址已变更。",
+                
+            ],
+            buttons : [
+                
+                    {
+                        icon  : "icon-home",
+                        text  : "返回首页",
+                        href  : "/",
+                        class : ""
+                    },
+                
+            ]
+        },
+
+        MenuNotice : {
+            enable : true,
+            notice : "简单地活着，肆意而又精彩！",
+            speed  : 20
+        },
+        MenuList : [
+            
+                {
+                    name   : "首页",
+                    icon   : "icon-home-fill",
+                    href   : "/",
+                    type   : "index",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "分类",
+                    icon   : "icon-folder-fill",
+                    href   : "/category",
+                    type   : "category",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "标签",
+                    icon   : "icon-discount-fill",
+                    href   : "/tag",
+                    type   : "tag",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "归档",
+                    icon   : "icon-calendar-fill",
+                    href   : "/archive",
+                    type   : "archive",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "赞赏",
+                    icon   : "icon-heart-fill",
+                    href   : "/donate",
+                    type   : "donate",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "关于",
+                    icon   : "icon-about-fill",
+                    href   : "/about",
+                    type   : "about",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "订阅",
+                    icon   : "icon-rss",
+                    href   : "/atom.xml",
+                    type   : "",
+                    class  : "",
+                    target : "_blank"
+                },
+            
+                {
+                    name   : "搜索",
+                    icon   : "icon-search-menu",
+                    href   : "javascript:;",
+                    type   : "",
+                    class  : "search",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "留言板",
+                    icon   : "icon-comments-fill",
+                    href   : "/comment",
+                    type   : "comment",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "友情链接",
+                    icon   : "icon-link",
+                    href   : "/friend",
+                    type   : "friend",
+                    class  : "",
+                    target : "_self"
+                },
+            
+        ],
+        MenuLink : [
+            
+                
+                    {
+                        name   : "知乎",
+                        icon   : "icon-zhihu",
+                        href   : "https://www.zhihu.com/people/3ppcet",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "微博",
+                        icon   : "icon-weibo",
+                        href   : "https://weibo.com/u/7903342994",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "QQ",
+                        icon   : "icon-qq",
+                        href   : "javascript:;",
+                        class  : "image",
+                        target : "_self",
+                        image  : "/image/sidebar/qq.png"
+                    },
+                
+                    {
+                        name   : "微信",
+                        icon   : "icon-wechat",
+                        href   : "javascript:;",
+                        class  : "",
+                        target : "_self",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "GitHub",
+                        icon   : "icon-github",
+                        href   : "https://github.com/Hao-yv",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+            
+        ],
+
+        FooterStyle : 2,
+        BottomText  : "<div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>【人生若只如初见<span><i class='iconfont icon-like-fill'></i></span>何事秋风悲画扇】</div><div>&copy; 2020-2023 WorstOne. All Rights Reserved.</div>",
+
+        ConsoleList : [
+            
+                
+                    [
+                        
+                            
+                                "Based on cnblogs theme SimpleMemory.",
+                            
+                                "",
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                "SimpleMemory Author:",
+                            
+                                "BNDong",
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                "Theme:",
+                            
+                                "LiveForCode",
+                            
+                        
+                    ],
+                
+            
+        ],
+
+        FontIconExtend : "",
+
+        Donate : {
+            paypal  : "",
+            bitcoin : "",
+            alipay  : "/image/donate/alipay.png",
+            wechat  : "/image/donate/wechat.png"
+        },
+
+        Search : {
+            applicationID : "77N4X2INOA",
+            apiKey        : "d08fd408b6a0c687d24f5ebd2efdc969",
+            indexName     : "My First Application",
+            hits          : {
+                page : 10
+            },
+            labels        : {
+                placeholder : "搜索",
+                empty       : "未发现与 「${query}」 相关的内容",
+                stats       : "${hits} 条相关条目，使用了 ${time} 毫秒",
+            }
+        }, 
+
+        Comment : {
+            switch : true,
+            type   : "Valine",
+        },
+
+        Waline : {
+            el              : ".comments-content",
+            serverURL       : "",
+            path            : window.location.pathname,
+            meta            : "['nick', 'mail', 'link']",
+            requiredMeta    : "['nick', 'mail']",
+            pageSize        : 10,
+            lang            : "zh-cn",
+            locale: {
+                admin       : "博主",
+                anonymous   : "匿名用户",
+                sofa        : "快来做第一个评论的人吧 ~",
+                placeholder : "你是我一生只会遇见一次的惊喜...",
+            },
+            dark            : "html[color-scheme='dark']",
+            search          : false,
+            pageview        : true,
+            comment         : true,
+            copyright       : false,
+        },
+
+        Valine : {
+            el             : ".comments-content",
+            appId          : "srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz",
+            appKey         : "8uVSP1q6UlALVC5igYfIfv2h",
+            serverURLs     : "",
+            placeholder    : "你是我一生只会遇见一次的惊喜...",
+            avatar         : "mm",
+            meta           : "nick,mail,link",
+            requiredFields : "nick,mail",
+            pageSize       : 5,
+            lang           : "zh-cn",
+            visitor        : true,
+            enableQQ       : true
+        },
+
+        Tocbot : {
+            switch                : true,
+            tocSelector           : ".toc",
+            contentSelector       : ".article-body",
+            headingSelector       : "h1, h2, h3, h4, h5",
+            headingsOffset        : 0,
+            scrollSmooth          : true,
+            scrollSmoothOffset    : -5,
+            positionFixedSelector : ".toc",
+            positionFixedClass    : "toc-fixed",
+            fixedSidebarOffset    : "",
+        },
+
+        Require : {
+            baseUrl     : "/js/",
+            waitSeconds : 100
+        },
+
+        Music : {
+            type : "Meting"
+        },
+        APlayer : {
+            container : ".aplayer",
+            fixed     : true,
+            autoplay  : false,
+            loop      : "all",
+            order     : "random",
+            preload   : "auto",
+            volume    : 0.67,
+            mutex     : true,
+            lrcType   : 3,
+            audio     : [
+                
+                    {
+                        name   : "Endless Tears",
+                        artist : "CLIFF EDGE",
+                        cover  : "/music/cover/Endless Tears.jpg",
+                        url    : "/music/song/Endless Tears.mp3",
+                        lrc    : "/music/lrc/Endless Tears.lrc"
+                    },
+                
+            ]
+        },
+        Meting : {
+            api      : "https://api.i-meto.com/meting/api",
+            id       : "9301661017", 
+            lrcshow  : false, 
+            server   : "netease", 
+            type     : "playlist", 
+            fixed    : true, 
+            autoplay : false, 
+            loop     : "all", 
+            order    : "random", 
+            preload  : "auto", 
+            volume   : 0.67, 
+            mutex    : true
+        },
+
+        Mouse : {
+            enable  : true,
+            options : {
+                size  : 6,
+                sizeF : 24
+            }
+        },
+
+        LazyLoad : {
+            default : "/image/website/lazyload.svg"
+        },
+  
+        Style : {
+            aplayer          : "/css/APlayer.css",
+            archive          : "/css/archive.css",
+            base             : "/css/base.css",
+            clipboard        : "/css/clipboard.css",
+            code             : "/css/code.css",
+            donate           : "/css/donate.css",
+            fancybox         : "/css/jquery.fancybox.css",
+            footer           : "/css/footer.css",
+            iconfont         : "/iconfont/iconfont.css",
+            index            : "/css/index.css",
+            menuBubble       : "/css/menu-bubble.css",
+            mouse            : "/css/mouse.css",
+            page             : "/css/page.css",
+            post             : "/css/post.css",
+            search           : "/css/search.css",
+            tocbot           : "/css/tocbot.css",
+            valine           : "/css/valine.css",
+            waline           : "/css/waline.css",
+            walineCustom     : "/css/waline-custom.css"
+        },
+
+        Script: {
+            aplayer          : "/js/APlayer.min.js",
+            config           : "/js/require.config.js",
+            index            : "/js/index.js",
+            instantSearch    : "/js/instantsearch.min.js",
+            iscroll          : "/js/iscroll.js",
+            jQuery           : "/js/jquery-3.4.1.min.js",
+            loading          : "/js/loading.js",
+            meting           : "/js/Meting.min.js",
+            require          : "/js/require.min.js",
+            waline           : "/js/waline.mjs",
+            pageview         : "/js/pageview.mjs",
+            comment          : "/js/comment.mjs",
+        },
+
+        Font: {
+            LongCang    : "/font/LongCang.css",
+            Monda       : "/font/Monda.css",
+            NotoSansSC  : "/font/NotoSansSC.css",
+            NotoSerifSC : "/font/NotoSerifSC.css",
+            Playball    : "/font/Playball.css",
+            PTMono      : "/font/PTMono.css",
+            Roboto      : "/font/Roboto.css",
+            RobotoSlab  : "/font/RobotoSlab.css",
+            Rosario     : "/font/Rosario.css",
+            UbuntuMono  : "/font/UbuntuMono.css"
+        },
+
+        Suffix : {
+            about : "简单地活着, 肆意又精彩."
+        },
+            
+        Theme : {
+            url  : "https://github.com/first19326/Hexo-LiveForCode",
+            name : "Hexo - Live For Code"
+        }  
+    };
+</script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>

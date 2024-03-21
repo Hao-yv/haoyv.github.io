@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="referrer" content="origin">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>
+        
+            SQL文档
+        
+    </title>
+    <link rel="shortcut icon" href="#"/>
+
+    <link type="text/css" rel="stylesheet" href="/font/LongCang.css">
+    <link type="text/css" rel="stylesheet" href="/font/Monda.css">
+    <link type="text/css" rel="stylesheet" href="/font/NotoSansSC.css">
+    <link type="text/css" rel="stylesheet" href="/font/NotoSerifSC.css">
+    <link type="text/css" rel="stylesheet" href="/font/Playball.css">
+    <link type="text/css" rel="stylesheet" href="/font/PTMono.css">
+    <link type="text/css" rel="stylesheet" href="/font/Roboto.css">
+    <link type="text/css" rel="stylesheet" href="/font/RobotoSlab.css">
+    <link type="text/css" rel="stylesheet" href="/font/Rosario.css">
+    <link type="text/css" rel="stylesheet" href="/font/UbuntuMono.css">
+
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/code.css">
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="BLog for Haoyv" type="application/atom+xml">
+</head>
+<body>
+    <a id="cover"></a>
+    <link type="text/css" rel="stylesheet" href="/css/post.css">
+<div id="header" class="header">
+    <div class="vertical">
+        <div class="inner">
+            
+                <h1 class="header-subtitle">SQL文档</h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2024-02-17
+                        </span>
+                        
+                            
+                                <span id="/article/c88f20d/" class="leancloud_visitors" data-flag-title="SQL文档">
+                                    <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                                </span>
+                            
+                            
+                                <span>
+                                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/article/c88f20d/"></span>
+                                </span>
+                              
+                        
+                    </p>
+                    
+                        
+                            <span class="category-color">文档</span>
+                        
+                    
+                    
+                        
+                            <span class="tag-color">文档</span>
+                        
+                            <span class="tag-color">sql</span>
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+    
+</div>
+<div id="container">
+    
+        <!-- 文章页面 -->
+        <div id="article">
+            <div class="toc"></div>
+            <div class="article-body">
+                <h1 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h1><h2 id="sql通用语法"><a href="#sql通用语法" class="headerlink" title="sql通用语法"></a>sql通用语法</h2><ol>
+<li><p>SQL语句可以单行或多行书写，以分号结尾</p>
+</li>
+<li><p>SQL语句可以使用空格&#x2F;缩进来增强语句可读性</p>
+</li>
+<li><p>MySQL数据库的SQL语句不区分大小写，但关键字建议大写</p>
+</li>
+<li><p>注释：</p>
+<ul>
+<li>单行注释：-- 注释内容 或 # 注释内容（Mysql特有）</li>
+<li>多行注释：&#x2F;* 注释内容*&#x2F;</li>
+</ul>
+</li>
+</ol>
+<h2 id="sql语句分类"><a href="#sql语句分类" class="headerlink" title="sql语句分类"></a>sql语句分类</h2><table>
+<thead>
+<tr>
+<th align="center">分类</th>
+<th align="center">全称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">DDL</td>
+<td align="center">Data Definition Language</td>
+<td align="center">数据定义语言，用来定义数据库对象（数据库， 表， 字段）</td>
+</tr>
+<tr>
+<td align="center">DML</td>
+<td align="center">Data Maniulation Language</td>
+<td align="center">数据操作语言，用来对数据库表中的数据进行增删改</td>
+</tr>
+<tr>
+<td align="center">DQL</td>
+<td align="center">Data Query Language</td>
+<td align="center">数据查询语言，用来查询数据库表中的记录</td>
+</tr>
+<tr>
+<td align="center">DCL</td>
+<td align="center">Data Control Language</td>
+<td align="center">数据控制语言，用来创建用户，控制数据库访问权限</td>
+</tr>
+</tbody></table>
+<h2 id="SQL数据分类"><a href="#SQL数据分类" class="headerlink" title="SQL数据分类"></a>SQL数据分类</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">大小</th>
+<th align="left">有符号（SIGEND）范围</th>
+<th align="left">无符号（UNSIGEND）范围</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">TINYINT</td>
+<td align="left">1 byte</td>
+<td align="left">(-128, 127)</td>
+<td align="left">(0, 255)</td>
+<td align="center">小整数值</td>
+</tr>
+<tr>
+<td align="left">SMALLINT</td>
+<td align="left">2 bytes</td>
+<td align="left">(-32 768, 32 767)</td>
+<td align="left">(0, 65 535)</td>
+<td align="center">大整数值</td>
+</tr>
+<tr>
+<td align="left">MEDIUMINT</td>
+<td align="left">3 bytes</td>
+<td align="left">(-8 388 608, 8 388 607)</td>
+<td align="left">(0, 16 777 215)</td>
+<td align="center">大整数值</td>
+</tr>
+<tr>
+<td align="left">INT 或 INTEGER</td>
+<td align="left">4 bytes</td>
+<td align="left">(-2 147 483 648, 2 147 483 647)</td>
+<td align="left">(0, 4 294 967 295)</td>
+<td align="center">大整数值</td>
+</tr>
+<tr>
+<td align="left">BIGINT</td>
+<td align="left">8 bytes</td>
+<td align="left">($-2^{63}$ , $2^{63} - 1$ )</td>
+<td align="left">(0, $2^{64} - 1$)</td>
+<td align="center">极大整数值</td>
+</tr>
+<tr>
+<td align="left">FLOAT</td>
+<td align="left">6 bytes</td>
+<td align="left">(-3.402 823 466 E + 38, 3.402 823 466 351 E + 38)</td>
+<td align="left">0 和 (1.175 494 351 E -38, 3.02 823 466 E + 308)</td>
+<td align="center">单精度浮点数值</td>
+</tr>
+<tr>
+<td align="left">DOUBLE</td>
+<td align="left">8 bytes</td>
+<td align="left">(-1.7976931348623157 E + 308, 1.7976931348623157 E + 308)</td>
+<td align="left">0 和 (2.2 250 738 585 072 014 E - 308, 1.796 931 348 623 157 E + 308)</td>
+<td align="center">双精度浮点数值</td>
+</tr>
+<tr>
+<td align="left">DECIMAL</td>
+<td align="left"></td>
+<td align="left">依赖于M（精度）和D（标度）的值</td>
+<td align="left">依赖于M（精度）和D（标度）的值</td>
+<td align="center">小数值（精确定点数）</td>
+</tr>
+</tbody></table>
+<h3 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>大小</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CHAR</td>
+<td>0 ~ 255 bytes</td>
+<td>定长字符串</td>
+</tr>
+<tr>
+<td>VARCHAR</td>
+<td>0 ~ 65 535 bytes</td>
+<td>变长字符串</td>
+</tr>
+<tr>
+<td>TINYBLOB</td>
+<td>0 ~ 255 bytes</td>
+<td>不超过255个字符的二进制数据</td>
+</tr>
+<tr>
+<td>TINYTEXT</td>
+<td>0 ~ 255 bytes</td>
+<td>短文本字符串</td>
+</tr>
+<tr>
+<td>BLOB</td>
+<td>0 ~ 65 535 bytes</td>
+<td>二进制形式长文本数据</td>
+</tr>
+<tr>
+<td>TEXT</td>
+<td>0 ~ 65 535 bytes</td>
+<td>长文本数据</td>
+</tr>
+<tr>
+<td>MEDIUMBLOB</td>
+<td>0 ~ 16 777 215 bytes</td>
+<td>二进制形式的中等长度文本数据</td>
+</tr>
+<tr>
+<td>MEDIUMTEXT</td>
+<td>0 ~ 16 777  215 bytes</td>
+<td>中等长度文本数据</td>
+</tr>
+<tr>
+<td>LONGBLOB</td>
+<td>0 - 4294 967 295 bytes</td>
+<td>二进制形式的极大文本数据</td>
+</tr>
+<tr>
+<td>LONGTEXT</td>
+<td>0 ~ 4294 967 295 bytes</td>
+<td>极大文本数据</td>
+</tr>
+</tbody></table>
+<h3 id="日期类型"><a href="#日期类型" class="headerlink" title="日期类型"></a>日期类型</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th align="center">大小</th>
+<th>范围</th>
+<th>格式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DATE</td>
+<td align="center">3</td>
+<td>1000-01-01 至 9999-12-31</td>
+<td>YYYY-MM-DD</td>
+<td>日期值</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td align="center">3</td>
+<td>- 838 : 59 : 59 至 838 : 59 : 59</td>
+<td>HH : MM : SS</td>
+<td>时间值或持续时间</td>
+</tr>
+<tr>
+<td>YEAR</td>
+<td align="center">1</td>
+<td>1901 至 2155</td>
+<td>YYYY</td>
+<td>年份值</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td align="center">8</td>
+<td>1000 - 01 - 01 00 : 00 : 01 至 9999 - 12 - 31 23 : 59 : 59</td>
+<td>YYYY -MM - DD HH : MM : SS</td>
+<td>混合日期和时间值</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td align="center">4</td>
+<td>1970 - 01 - 01 00 : 00 : 01 至 2038 - 01 - 19 03 ： 14 ： 07</td>
+<td>YYYY - MM - DD HH : MM : SS</td>
+<td>混合日期和时间值</td>
+</tr>
+</tbody></table>
+<h2 id="DDL-——-数据定义语言"><a href="#DDL-——-数据定义语言" class="headerlink" title="DDL —— 数据定义语言"></a>DDL —— 数据定义语言</h2><p>DDL英文全称是Data Definition Language(数据定义语言)，负责数据结构定义与数据库对象定义</p>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><p>查询所有数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SHOW</span> DATABASES;<br></code></pre></td></tr></table></figure>
+
+<p>查询当前数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">SELECT</span> DATABASES;<br></code></pre></td></tr></table></figure>
+
+<p>查询当前数据库所有表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SHOW</span> TABLES;<br></code></pre></td></tr></table></figure>
+
+<p>查询表结构</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DESC</span> 表名;<br></code></pre></td></tr></table></figure>
+
+<p>查询指定表的建表语句</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> 表名;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>创建数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">CREATE</span> DATABASE [IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span>] 数据库名 [<span class="hljs-keyword">DEFAULT</span> CHARSET 字符集][<span class="hljs-keyword">COLLATE</span> 排序规则];<br></code></pre></td></tr></table></figure>
+
+<p>创建数据库表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> 表名(<br>	字段<span class="hljs-number">1</span> 字段<span class="hljs-number">1</span>类型[COMMeNT 字段<span class="hljs-number">1</span>注解],<br>	字段<span class="hljs-number">2</span> 字段<span class="hljs-number">2</span>类型[COMMeNT 字段<span class="hljs-number">2</span>注解],<br>    字段<span class="hljs-number">3</span> 字段<span class="hljs-number">3</span>类型[COMMeNT 字段<span class="hljs-number">3</span>注解],<br>    ......<br>    字段n 字段n类型[COMMeNT 字段n注解],<br>)[COMMRNT 表注解];<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>删除数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DROP</span> DATABASES [IF <span class="hljs-keyword">EXISTS</span>] 数据库名;<br></code></pre></td></tr></table></figure>
+
+<p>删除表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span>[IF <span class="hljs-keyword">EXISTS</span>] 表名;<br></code></pre></td></tr></table></figure>
+
+<p>删除指定表，并重新弄创建该表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">TRUNCATE</span> <span class="hljs-keyword">TABLE</span> 表名;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>使用数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL">USE 数据库名;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h3><p>添加表中字段</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> 表名 <span class="hljs-keyword">ADD</span> 字段名 类型(长度) [COMMENT 注释][约束]<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>修改表中数据类型</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> 表名 MODIFY 字段名 新数据类型(长度);<br></code></pre></td></tr></table></figure>
+
+<p>修改表中字段名和数据类型</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> 表名 CHANGE 旧字段名 新字段名 类型(长度) [COMMENT 注释][约束];<br></code></pre></td></tr></table></figure>
+
+<p>修改表名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> 表名 RENAME <span class="hljs-keyword">TO</span> 新表名；<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="DDL总结"><a href="#DDL总结" class="headerlink" title="DDL总结"></a>DDL总结</h3><p>数据库操作</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SHOW</span> DATABASES;<br><span class="hljs-keyword">CREATE</span> DATABASE 数据库名;<br>USE 数据库名;<br><span class="hljs-keyword">SELECT</span> DATABASES();<br><span class="hljs-keyword">DROP</span> DATABASE 数据库名;<br></code></pre></td></tr></table></figure>
+
+<p>表操作</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SHOW</span> TABLES;<br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> 表名(字段 字段类型, 字段 字段类型)<br><span class="hljs-keyword">DESC</span> 表名;<br><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> 表名;<br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> 表名 <span class="hljs-keyword">ADD</span><span class="hljs-operator">/</span> MODIFY<span class="hljs-operator">/</span> CHANGE<span class="hljs-operator">/</span> <span class="hljs-keyword">DROP</span><span class="hljs-operator">/</span> RENAME TO...;<br><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> 表名;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="DML-——-数据操作语言"><a href="#DML-——-数据操作语言" class="headerlink" title="DML —— 数据操作语言"></a>DML —— 数据操作语言</h2><p>DML英文全称是DATA Mainpulation Languague(数据操作语言)，用来对数据库表中表的诗句记录进行增删改操作</p>
+<h3 id="数据添加"><a href="#数据添加" class="headerlink" title="数据添加"></a>数据添加</h3><p>给指定字段添加数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> 表名(字段名<span class="hljs-number">1</span>， 字段名<span class="hljs-number">2</span>, ... ) <span class="hljs-keyword">VALUES</span>(值<span class="hljs-number">1</span>， 值<span class="hljs-number">2</span>, ...);<br></code></pre></td></tr></table></figure>
+
+<p>给全部字段添加数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> 表名 <span class="hljs-keyword">VALUES</span>(值<span class="hljs-number">1</span>, 值<span class="hljs-number">2</span>, ...);<br></code></pre></td></tr></table></figure>
+
+<p>批量添加数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> 表名(字段名<span class="hljs-number">1</span>， 字段名<span class="hljs-number">2</span>，...) <span class="hljs-keyword">VALUES</span>(值<span class="hljs-number">1</span>， 值<span class="hljs-number">2</span>, ...), (值<span class="hljs-number">1</span>， 值<span class="hljs-number">2</span>, ...),...(值<span class="hljs-number">1</span>， 值<span class="hljs-number">2</span>, ...);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> 表名 <span class="hljs-keyword">VALUES</span> (值<span class="hljs-number">1</span>， 值<span class="hljs-number">2.</span>..)，(值<span class="hljs-number">1</span>， 值<span class="hljs-number">2.</span>..),...(值<span class="hljs-number">1</span>， 值<span class="hljs-number">2.</span>..);<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong> </p>
+<ul>
+<li>插入数据时，指定的字段顺序需要于值的顺序一一对应</li>
+<li>字符串和日期型数据应包含在引号里</li>
+<li>插入的数据大小，应该在字段的规定范围内</li>
+</ul>
+<h3 id="数据修改"><a href="#数据修改" class="headerlink" title="数据修改"></a>数据修改</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">UPDATE</span> 表名 <span class="hljs-keyword">SET</span> 字段名<span class="hljs-number">1</span> <span class="hljs-operator">=</span> 值<span class="hljs-number">1</span>， 字段名<span class="hljs-number">2</span> <span class="hljs-operator">=</span> 值<span class="hljs-number">2</span>，...[<span class="hljs-keyword">WHERE</span> 条件];<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong> </p>
+<ul>
+<li>UPDATE语句条件可以有也可以没有，如果没有条件，则会修改整张表的所有数据</li>
+</ul>
+<h3 id="数据删除"><a href="#数据删除" class="headerlink" title="数据删除"></a>数据删除</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> 表名 [<span class="hljs-keyword">WHERE</span> 条件];<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>DELETE语句条件可以有也可以没有，如果没有条件，则会删除整张表的所有数据</p>
+</li>
+<li><p>DELETE语句不能删除某一个字段的值（可以使用UPDATE）</p>
+</li>
+</ul>
+<h3 id="DML总结"><a href="#DML总结" class="headerlink" title="DML总结"></a>DML总结</h3><p>添加数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> 表名(字段名<span class="hljs-number">1</span>， 字段名<span class="hljs-number">2</span>，...) <span class="hljs-keyword">VALUES</span>(值<span class="hljs-number">1</span>， 值<span class="hljs-number">2</span>, ...), (值<span class="hljs-number">1</span>， 值<span class="hljs-number">2</span>, ...),...(值<span class="hljs-number">1</span>， 值<span class="hljs-number">2</span>, ...);<br></code></pre></td></tr></table></figure>
+
+<p>修改数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">UPDATE</span> 表名 <span class="hljs-keyword">SET</span> 字段名<span class="hljs-number">1</span> <span class="hljs-operator">=</span> 值<span class="hljs-number">1</span>， 字段名<span class="hljs-number">2</span> <span class="hljs-operator">=</span> 值<span class="hljs-number">2</span>，...[<span class="hljs-keyword">WHERE</span> 条件];<br></code></pre></td></tr></table></figure>
+
+<p>删除数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> 表名 [<span class="hljs-keyword">WHERE</span> 条件];<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="DQL-——-数据查询语言"><a href="#DQL-——-数据查询语言" class="headerlink" title="DQL —— 数据查询语言"></a>DQL —— 数据查询语言</h2><p>DML英文全称是DATA Mainpulation Languague(数据查询语言)，用来查询数据库中表的记录</p>
+<h3 id="基本查询"><a href="#基本查询" class="headerlink" title="基本查询"></a>基本查询</h3><p>查询多个字段</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段<span class="hljs-number">1</span>, 字段<span class="hljs-number">2</span>, ... <span class="hljs-keyword">FROM</span> 表名;<br><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> 表名;<br></code></pre></td></tr></table></figure>
+
+<p>设置别名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段<span class="hljs-number">1</span> [<span class="hljs-keyword">AS</span> 别名<span class="hljs-number">1</span>], 字段<span class="hljs-number">2</span> [<span class="hljs-keyword">AS</span> 别名<span class="hljs-number">2</span>], ... <span class="hljs-keyword">FROM</span> 表名;<br></code></pre></td></tr></table></figure>
+
+<p>去除重复记录</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表名;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表名 <span class="hljs-keyword">WHERE</span> 条件列表;<br></code></pre></td></tr></table></figure>
+
+<p><strong>条件：</strong></p>
+<table>
+<thead>
+<tr>
+<th>比较运算符</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>&gt;&#x3D;</td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于等于</td>
+</tr>
+<tr>
+<td>&#x3D;</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>&lt;&gt;  或  !&#x3D;</td>
+<td>不等于</td>
+</tr>
+<tr>
+<td>BERWEEN … AND …</td>
+<td>在某个范围之内（含最大、最小值）</td>
+</tr>
+<tr>
+<td>IN(…)</td>
+<td>在 in 之后的列表中的值， 多选一</td>
+</tr>
+<tr>
+<td>LIKE 占位符</td>
+<td>模糊匹配（ _ 匹配单个字符， % 匹配任意个字符）</td>
+</tr>
+<tr>
+<td>IS NULL</td>
+<td>是NULL</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>逻辑运算符</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AND 或 &amp;&amp;</td>
+<td>并且（多个条件同时成立）</td>
+</tr>
+<tr>
+<td>OR 或 ||</td>
+<td>或者（多个条件任意一个成立）</td>
+</tr>
+<tr>
+<td>NOT 或 ！</td>
+<td>非，不是</td>
+</tr>
+</tbody></table>
+<h3 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h3><p><strong>聚合函数</strong></p>
+<p>将一系列数据作为整体，进行纵向运算</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>count</td>
+<td>统计数量</td>
+</tr>
+<tr>
+<td>max</td>
+<td>最大值</td>
+</tr>
+<tr>
+<td>min</td>
+<td>最小值</td>
+</tr>
+<tr>
+<td>avg</td>
+<td>平均值</td>
+</tr>
+<tr>
+<td>sum</td>
+<td>求和</td>
+</tr>
+</tbody></table>
+<p>语法</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 聚合函数(字段列表) <span class="hljs-keyword">FROM</span> 表名 [<span class="hljs-keyword">WHERE</span> 条件];<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong></p>
+<ul>
+<li><font color = red><strong>NULL值</strong></font>不参与聚合函数运算</li>
+</ul>
+<p>分组数据查询</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表名 [<span class="hljs-keyword">WHERE</span> 条件] <span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> 分组字段名 [<span class="hljs-keyword">HAVING</span> 分组后过滤条件];<br></code></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>WHERE 和 HAVING 的区别：</p>
+<p>​		执行时机不同：where是分组之前进行过滤，不满足where条件则不参与分组；而having是分组之后对数据进行过滤</p>
+<p>​		判断条件不同：where不能对聚合函数进行判断，而having可以</p>
+<p>执行顺序：WHERE &gt; 聚合函数 &gt; HAVING</p>
+<p>分组之后，查询字段一般为聚合函数和分组字段，查询其他字段无任何意义</p>
+</blockquote>
+<h3 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h3><p>数据排序</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表名 <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> 字段<span class="hljs-number">1</span> 排序方式<span class="hljs-number">1</span>, 字段<span class="hljs-number">2</span>, 排序方式<span class="hljs-number">2</span>;<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>如果是多字段排序，只有第一个字段相同时，才会根据第二个字段进行排序</p>
+</li>
+<li><p>ASC代表升序</p>
+</li>
+<li><p>DESC代表降序</p>
+</li>
+</ul>
+<h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表名 LIMT 起始索引, 查询记录数;<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong></p>
+<ul>
+<li>起始索引从 0 开始， <font color = red> <strong>起始索引 &#x3D; ( 查询页码 - 1) *  每页显示记录数</strong> </font></li>
+<li>分页查询是数据库的方言，不同数据库有不同的实现，MySQL是 <code>LIMT</code></li>
+<li>如果查询的是第一页数据，起始索引可以省略，直接简写为 Limit 10</li>
+</ul>
+<h3 id="DQL语句编写和执行顺序"><a href="#DQL语句编写和执行顺序" class="headerlink" title="DQL语句编写和执行顺序"></a>DQL语句编写和执行顺序</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 									<span class="hljs-number">4</span>					<span class="hljs-keyword">FROM</span>		<br>		字段列表													表名列表<br><span class="hljs-keyword">FROM</span>									<span class="hljs-number">1</span>					<span class="hljs-keyword">WHERE</span><br>		表名列表													条件列表<br><span class="hljs-keyword">WHERE</span>									<span class="hljs-number">2</span>					<span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>		条件列表													分组字段列表<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span>								<span class="hljs-number">3</span>					<span class="hljs-keyword">HAVING</span><br>		分组字段列表												   分组后字段列表<br><span class="hljs-keyword">HAVING</span>														<span class="hljs-keyword">SELECT</span><br>		分组后条件列表										          字段列表<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span>								<span class="hljs-number">5</span>					<span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><br>		排序字段列表												   排序字段列表<br>LIMIT									<span class="hljs-number">6</span>					LIMIT<br>		分页参数													 分页参数<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="DQL总结"><a href="#DQL总结" class="headerlink" title="DQL总结"></a>DQL总结</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 										<br>		字段列表  				<span class="hljs-comment">-------&gt;		字段名 [AS] 别名</span><br><span class="hljs-keyword">FROM</span><br>		表名列表<br><span class="hljs-keyword">WHERE</span><br>		条件列表				<span class="hljs-comment">-------&gt;		&gt;、 &gt;=、&lt;、&lt;=、&lt;&gt;、 like、 between and in、 and、 or</span><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span><br>		分组字段列表<br><span class="hljs-keyword">HAVING</span><br>		分组后条件列表<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span><br>		排序字段列表			   <span class="hljs-comment">-------&gt;		   升序ASC， 降序DESC</span><br>LIMIT<br>		分页参数				<span class="hljs-comment">-------&gt;		 起始索引（从0开始）， 每页展示记录数</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="DCL-——-数据控制语言"><a href="#DCL-——-数据控制语言" class="headerlink" title="DCL —— 数据控制语言"></a>DCL —— 数据控制语言</h2><p>DCL英文全称是DML英文全称是DATA Mainpulation Languague(数据查询语言)，用来管理数据库、用户、控制数据库的访问权限</p>
+<h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><p>1、查询用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mysql">USE mysql;<br>SELECT * FROM user；<br></code></pre></td></tr></table></figure>
+
+<p>2、创建用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;用户名&#x27;</span>@<span class="hljs-string">&#x27;主机名&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;密码&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<p>3、修改用户密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mysql">ALTER USER &#x27;用户名&#x27;@&#x27;主机名&#x27; IDENTIFIED WITH mysql_native_password BY &#x27;新密码&#x27;<br></code></pre></td></tr></table></figure>
+
+<p>4、删除用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;用户名&#x27;</span>@<span class="hljs-string">&#x27;主机名&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="权限控制"><a href="#权限控制" class="headerlink" title="权限控制"></a>权限控制</h3><ol>
+<li>查询权限</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">SHOW</span> GRANTS <span class="hljs-keyword">FOR</span> <span class="hljs-string">&#x27;用户名&#x27;</span>@<span class="hljs-string">&#x27;主机名&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>授予权限</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">GRANT</span> 权限列表 <span class="hljs-keyword">ON</span> 数据库名.表名 <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;用户名&#x27;</span>@<span class="hljs-string">&#x27;主机名&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>撤销权限</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL">REMOVE 权限列表 <span class="hljs-keyword">ON</span> 数据库名.表名 <span class="hljs-keyword">FROM</span> <span class="hljs-string">&#x27;用户名&#x27;</span>@<span class="hljs-string">&#x27;主机名&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<p><strong>MySQL常用权限：</strong></p>
+<table>
+<thead>
+<tr>
+<th>权限</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ALL、ALL PRIVILEGES</td>
+<td>所有权限</td>
+</tr>
+<tr>
+<td>SELECT</td>
+<td>查询数据</td>
+</tr>
+<tr>
+<td>INSERT</td>
+<td>插入数据</td>
+</tr>
+<tr>
+<td>UPDATE</td>
+<td>修改数据</td>
+</tr>
+<tr>
+<td>DELTTE</td>
+<td>删除数据</td>
+</tr>
+<tr>
+<td>ALTER</td>
+<td>修改表</td>
+</tr>
+<tr>
+<td>DROP</td>
+<td>删除数据库&#x2F;表&#x2F;视图</td>
+</tr>
+<tr>
+<td>CREATE</td>
+<td>创建数据库表</td>
+</tr>
+</tbody></table>
+<p><strong>注意：</strong></p>
+<ul>
+<li>多个权限之间，使用逗号分隔</li>
+<li>授权时，数据库名和表名可以用 * 进行分配，代表所有</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><font color = red><strong>函数</strong></font>是指一段可以被直接被另一段程序调用的代码</p>
+<h3 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>COUNT (S1, S1, … $S_{n}$)</td>
+<td>字符串拼接，将S1, S2, … $S_{n}$ 拼接成一个字符串</td>
+</tr>
+<tr>
+<td>LOWER (str)</td>
+<td>将字符串 str 全部转为 小写</td>
+</tr>
+<tr>
+<td>UPPER (str)</td>
+<td>将字符串 str 全部转为 大写</td>
+</tr>
+<tr>
+<td>LPAD (str, n, pad)</td>
+<td>左填充，用字符串pad对str的左边进行填充，达到n个字符串长度</td>
+</tr>
+<tr>
+<td>RPAD（str, n, pad）</td>
+<td>右填充，用字符串pad对str的右边进行填充，达到n个字符串长度</td>
+</tr>
+<tr>
+<td>TRM（str）</td>
+<td>去掉字符串头部和尾部的空格</td>
+</tr>
+<tr>
+<td>SUBSTRING（str, start, len）</td>
+<td>去掉字符串str位置起的len个长度的字符串</td>
+</tr>
+</tbody></table>
+<h3 id="数值函数"><a href="#数值函数" class="headerlink" title="数值函数"></a>数值函数</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CEIL(x)</td>
+<td>向上取整</td>
+</tr>
+<tr>
+<td>FLOOR(x)</td>
+<td>向下取整</td>
+</tr>
+<tr>
+<td>MOD(x, y)</td>
+<td>返回 x &#x2F; y 的模</td>
+</tr>
+<tr>
+<td>RAND()</td>
+<td>返回 0 ~ 1之内的随机数</td>
+</tr>
+<tr>
+<td>ROUND(x, y)</td>
+<td>求参数 x 的四舍五入的值，保留 y 位小数</td>
+</tr>
+</tbody></table>
+<h3 id="日期函数"><a href="#日期函数" class="headerlink" title="日期函数"></a>日期函数</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CURDATE()</td>
+<td>返回当前日期</td>
+</tr>
+<tr>
+<td>CURTIME()</td>
+<td>返回当前时间</td>
+</tr>
+<tr>
+<td>NOW()</td>
+<td>返回当前日期和时间</td>
+</tr>
+<tr>
+<td>YEAR(date)</td>
+<td>获取指定 date 的年份</td>
+</tr>
+<tr>
+<td>MONIH(date)</td>
+<td>获取指定 date 的月份</td>
+</tr>
+<tr>
+<td>DAY(date)</td>
+<td>获取指定 date 的日期</td>
+</tr>
+<tr>
+<td>DATE_ADD(date, INTERVAL expr type)</td>
+<td>返回一个日期&#x2F;时间值加上一个时间间隔 expr 的时间值</td>
+</tr>
+<tr>
+<td>DATEDIFF(date1, date1)</td>
+<td>返回起始时间 date1 和 结束时间 date2 之间的天数</td>
+</tr>
+</tbody></table>
+<h3 id="流程函数"><a href="#流程函数" class="headerlink" title="流程函数"></a>流程函数</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IF(value, t ,f)</td>
+<td>如果 value 值为true则返回 t ，否则返回 f</td>
+</tr>
+<tr>
+<td>IFNULL(value1， value2)</td>
+<td>如果 value1不为空，则返回value1，否则value2</td>
+</tr>
+<tr>
+<td>CASE WHEN [vall] THEN [res1] … ELSE [default] END</td>
+<td>如果 expr 的值为 true, 返回 res1, … 否则返回 default 默认值</td>
+</tr>
+<tr>
+<td>CASE [expr] WHEN [vall] THEN [res1] … ELSE [default] END</td>
+<td>如果 expr 的值等于 vall ，返回 res1, … 否则返回 default 默认值</td>
+</tr>
+</tbody></table>
+<h2 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h2><p>约束是作用于表中字段上的规则，用于限制存储在表中的数据，保证数据库中数据的正确性，有效性和完整性</p>
+<table>
+<thead>
+<tr>
+<th align="left">约束</th>
+<th>描述</th>
+<th>关键字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">非空约束</td>
+<td>限制该字段的数据不能为<font color = red><strong>NULL</strong></font></td>
+<td><font color = red>NOT NULL</font></td>
+</tr>
+<tr>
+<td align="left">唯一约束</td>
+<td>保证该字段的所有数据都是唯一、不充分的</td>
+<td><font color = red>UNIQUE</font></td>
+</tr>
+<tr>
+<td align="left">主键约束</td>
+<td>主键是一行数据的唯一标识，要求非空且唯一</td>
+<td><font color = red>PRIMARY KEY</font></td>
+</tr>
+<tr>
+<td align="left">默认约束</td>
+<td>保存数据时，如果未指定该字段的值，则采用默认值</td>
+<td><font color = red>DEFAULT</font></td>
+</tr>
+<tr>
+<td align="left">检查约束（8.0.16版本之后）</td>
+<td>保证字段值满足某一条件</td>
+<td><font color = red>CHECK</font></td>
+</tr>
+<tr>
+<td align="left">外键约束</td>
+<td>用来让两张表的数据之间建立连接，保证数据的一致性和完整性</td>
+<td><font color = red>FOREIGN  KEY</font></td>
+</tr>
+</tbody></table>
+<h3 id="外键约束"><a href="#外键约束" class="headerlink" title="外键约束"></a>外键约束</h3><p>外键用来让两张表的数据之间建立连接，从而保证数据的一致性和完整性</p>
+<p>添加外键</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> 表名(<br>	字段名 数据类型<br>    ......<br>    [<span class="hljs-keyword">CONSTRAINT</span>] [外键名称] <span class="hljs-keyword">FOREIGN</span> KEY(外键字段名) <span class="hljs-keyword">REFERENCES</span> 主表(主表列名)<br>);<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> 表名 <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">CONSTRAINT</span> 外键名称 <span class="hljs-keyword">FOREIGN</span> KEY(外键字段名) <span class="hljs-keyword">REFERENCES</span> 主表(主表列名)<br></code></pre></td></tr></table></figure>
+
+<p>删除外键</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> 表名 <span class="hljs-keyword">DROP</span> <span class="hljs-keyword">FOREIGN</span> KEY 外键名称;<br></code></pre></td></tr></table></figure>
+
+<p>外键删除更新行为</p>
+<table>
+<thead>
+<tr>
+<th>行为</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NO ACTION</td>
+<td>当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有，则不允许删除&#x2F;更新（与RESTRICT）一致</td>
+</tr>
+<tr>
+<td>RESTRICT</td>
+<td>当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有，则不允许删除&#x2F;更新（与NO ACTION一致）</td>
+</tr>
+<tr>
+<td>CASTRICT</td>
+<td>当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有，则也删除&#x2F;更新外键在子表中的记录</td>
+</tr>
+<tr>
+<td>SET NULL</td>
+<td>当在父表中删除对应记录时，首先检查该记录是否有对应外键，如果有，则设置子表中该外键值为<font color = red>NULL</font>（要求该外键允许使用null）</td>
+</tr>
+<tr>
+<td>SET DEFAULT</td>
+<td>父表有变更时，子表将设置外阿健列成一个默认值（lnnodb不支持）</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> 表名 <span class="hljs-keyword">ADD</span> <span class="hljs-keyword">CONSTRAINT</span> 外键名称 <span class="hljs-keyword">FOREIGN</span> KEY (外键字段) <span class="hljs-keyword">REFERENCES</span> 主表名(主表字段名) <span class="hljs-keyword">ON</span> <span class="hljs-keyword">UPDATE</span> 行为 <span class="hljs-keyword">ON</span> <span class="hljs-keyword">DELETE</span> 行为;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="多表关系"><a href="#多表关系" class="headerlink" title="多表关系"></a>多表关系</h2><ol>
+<li><p>由于业务之间相互练习，各个表之间也存在着各种联系，分为<font color = red><strong>一对多</strong></font>、<font color = red><strong>多对多</strong></font>和<font color = red><strong>一对一</strong></font></p>
+<ul>
+<li><p>一对多：在多的一方建立外键，指向一的一方的主键</p>
+</li>
+<li><p>多对多：建立第三方表，中间表至少包含两个外键，分别关联两方主键</p>
+</li>
+<li><p>一对一：在任意一方加入外键，关联另一方的主键，并设置外键为唯一<font color = red><strong>UNIQUE</strong></font></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h2><ol>
+<li>指从多张表中查询数据</li>
+<li>笛卡尔积是指在数学中，两个集合的所有组合情况（<font color = red>在多表查询时，需要消除无效的笛卡尔积</font>）</li>
+</ol>
+<blockquote>
+<p>多表查询分类</p>
+<ul>
+<li>连接查询<ul>
+<li>内连接：相当于查询表A, B交集部分数据</li>
+<li>外连接：<ul>
+<li>左外连接：查询<font color = red>左表</font>数据，以及两张表交集部分数据</li>
+<li>右外连接：查询<font color = red>右表</font>数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>子查询</li>
+</ul>
+</blockquote>
+<h3 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h3><p>隐式内连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表<span class="hljs-number">1</span>， 表<span class="hljs-number">2</span> <span class="hljs-keyword">WHERE</span> 条件 ...;<br></code></pre></td></tr></table></figure>
+
+<p>显式内连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表<span class="hljs-number">1</span> [<span class="hljs-keyword">INNER</span>] <span class="hljs-keyword">JOIN</span> 表<span class="hljs-number">2</span> <span class="hljs-keyword">ON</span> 连接条件 ...;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><p>左外连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表<span class="hljs-number">1</span> <span class="hljs-keyword">LEFT</span> [<span class="hljs-keyword">OUTER</span>] <span class="hljs-keyword">JOIN</span> 表<span class="hljs-number">2</span> <span class="hljs-keyword">ON</span> 条件 ...;<br></code></pre></td></tr></table></figure>
+
+<p>右外连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表<span class="hljs-number">1</span> <span class="hljs-keyword">RIGHT</span> [<span class="hljs-keyword">OUTER</span>] <span class="hljs-keyword">JOIN</span> 表<span class="hljs-number">2</span> <span class="hljs-keyword">ON</span> 条件 ...;<br></code></pre></td></tr></table></figure>
+
+<p>自连接(<font color = red>自连接查询，可以是内连接，也可以是外联结</font>)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表A 别名A <span class="hljs-keyword">JOIN</span> 表A 别名B <span class="hljs-keyword">ON</span> 条件 ...;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="联合查询"><a href="#联合查询" class="headerlink" title="联合查询"></a>联合查询</h3><p>对于union查询，就是把多次查询的结果合并起来，形成一个新的查询结果集</p>
+<p>对于联合查询的多张表的列数必须保持一致，字段类型也需要保持一致</p>
+<p>union all 会将全部的数据直接合并在一起，union 会对合并后的数据去重</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表A...<br><span class="hljs-keyword">UNION</span>[<span class="hljs-keyword">ALL</span>]<br><span class="hljs-keyword">SELECT</span> 字段列表 <span class="hljs-keyword">FROM</span> 表B...;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><ol>
+<li>SQL语句中嵌套SELECT语句，称为<font color = red>嵌套查询</font>,又称<font color = red>子查询</font><br> 子查询外部的语句可以是<font color = red>INSERT &#x2F; UPDATE &#x2F;SELECT</font> 的任何一个</li>
+<li>根据子查询结构不同，分为：<ul>
+<li>标量子查询（子查询结果为单个值）</li>
+<li>列子查询（子查询结果为一列）</li>
+<li>行子查询（子查询结果为一行）</li>
+<li>表子查询（子查询结果为多行多列）</li>
+</ul>
+</li>
+<li>根据子查询位置，分为：WHERE之后，FROM之后，SELECT之后</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> t1 <span class="hljs-keyword">WHERE</span> count1 <span class="hljs-operator">=</span> (<span class="hljs-keyword">SELECT</span> column1 FTOM t2);<br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>标量子查询<br>  子查询返回结果值为单个值（数字、字符串、日期等最简单形式）<br>  常用操作符：&#x3D;、&lt;&gt;、&gt;、&gt;&#x3D;、&lt;、&lt;&#x3D;</p>
+</li>
+<li><p>列子查询<br>  子查询结果返回的是一列（可以是多行）<br>  常用操作符：IN、NOT IN、ANY、SOME、ALL</p>
+</li>
+<li><p>行子查询<br>  子查询返回的结果是一行（可以是多列）<br>  常用的操作符：&#x3D;、&lt;&gt;、IN、NOT IN</p>
+</li>
+<li><p>表子查询<br>  子查询返回结果是多行多列<br>  常用操作符：IN</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IN</td>
+<td>在指定集合范围内，多选一</td>
+</tr>
+<tr>
+<td>NOT IN</td>
+<td>不在指定集合范围内</td>
+</tr>
+<tr>
+<td>ANY</td>
+<td>子查询返回列表中，有任意一个满足即可</td>
+</tr>
+<tr>
+<td>SOME</td>
+<td>与 ANY 等值，使用 SOME 的地方都可以使用 ANY</td>
+</tr>
+<tr>
+<td>ALL</td>
+<td>子查询返回列表必须都满足</td>
+</tr>
+</tbody></table>
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>事务时一组操作的集合，是一个不可分割的工作单位，事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求，即这些操作<font color = red>要么同时成功，要么同时失败</font></p>
+<h3 id="事务操作"><a href="#事务操作" class="headerlink" title="事务操作"></a>事务操作</h3><ul>
+<li><p>方式一，设置手动提交指令</p>
+<ol>
+<li><p>查看，设置事务提交方式</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> @<span class="hljs-variable">@autocommit</span>;<br><span class="hljs-keyword">SET</span> @<span class="hljs-variable">@autocommit</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>提交事务</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">COMMIT</span>;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>回滚事务</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ROLLBACK</span>;<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>方式二， 开启事务指令</p>
+<ol>
+<li><p>开启事务</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">START</span> TRANSACTION 或 <span class="hljs-keyword">BEGIN</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>提交事务</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">COMMIT</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>回滚事务</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ROLLBACK</span>;<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h3 id="事务四大特性"><a href="#事务四大特性" class="headerlink" title="事务四大特性"></a>事务四大特性</h3><ul>
+<li>原子性：事务是不可分割的最小操作单元，要么全部成功，要么全部失败</li>
+<li>一致性：事务完成时，必须使得所有的数据都保持一致状态</li>
+<li>隔离性：数据库提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行</li>
+<li>持久性：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的</li>
+</ul>
+<h3 id="事务并发问题"><a href="#事务并发问题" class="headerlink" title="事务并发问题"></a>事务并发问题</h3><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>脏读</td>
+<td>一个事务读到另外一个事务还没有提交的数据</td>
+</tr>
+<tr>
+<td>不可重复读</td>
+<td>一个事务先后读取同一条事务，但两次读取的数据不同</td>
+</tr>
+<tr>
+<td>幻读</td>
+<td>一个事务按照条件查询数据时，没有对应的数据行，但是在插入数据时，又发现这行数据已经存在</td>
+</tr>
+</tbody></table>
+<h3 id="事务隔离级别"><a href="#事务隔离级别" class="headerlink" title="事务隔离级别"></a>事务隔离级别</h3><table>
+<thead>
+<tr>
+<th>隔离级别</th>
+<th align="center">脏读</th>
+<th align="center">不可重复读</th>
+<th align="center">幻读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Read uncommitted</td>
+<td align="center">$\checkmark$</td>
+<td align="center">$\checkmark$</td>
+<td align="center">$\checkmark$</td>
+</tr>
+<tr>
+<td>Read committed</td>
+<td align="center">$\times$</td>
+<td align="center">$\checkmark$</td>
+<td align="center">$\checkmark$</td>
+</tr>
+<tr>
+<td>Repeatable Read(默认)</td>
+<td align="center">$\times$</td>
+<td align="center">$\times$</td>
+<td align="center">$\checkmark$</td>
+</tr>
+<tr>
+<td>Serializable</td>
+<td align="center">$\times$</td>
+<td align="center">$\times$</td>
+<td align="center">$\times$</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 查看事务隔离级别</span><br><span class="hljs-keyword">SELECT</span> @<span class="hljs-variable">@TRANSACTION_ISOLATION</span>;<br><span class="hljs-comment">-- 设置事务隔离界别</span><br><span class="hljs-keyword">SET</span> [SESSION] TRANSACTION ISOLATION LEVEL &#123;READ UNCOMMITTED <span class="hljs-operator">|</span> READ COMMITTED <span class="hljs-operator">|</span> REPEATABLE READ <span class="hljs-operator">|</span> SERIALIZABLE&#125;<br></code></pre></td></tr></table></figure>
+
+
+                
+                <p class="end">__END__</p>
+            </div>
+            <div class="article-footer">
+                <div class="suffix-box">
+    <div class="suffix-box-left">
+        <img src="/image/sidebar/avatar.jpg" alt="BLog for Haoyv">
+    </div>
+    <div class="suffix-box-right">
+        <span class="suffix-box-title">文章作者：</span>BLog for Haoyv
+        <br>
+        <span class="suffix-box-title">文章出处：</span><a href="/article/c88f20d/" target="_blank">SQL文档</a>
+        <br>
+        <span class="suffix-box-title">作者签名：</span>简单地活着, 肆意又精彩.
+        <br>
+        <span class="suffix-box-title">关于主题：</span><a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - Live For Code</a>
+        <br>
+        <span class="suffix-box-title">版权声明：</span>文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+        <br>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+                
+                    <div class="category">
+                        分类：
+                        
+                            <a href="/category/%E6%96%87%E6%A1%A3/">文档</a>
+                        
+                    </div>
+                
+                
+                    <div class="tag">
+                        标签：
+                        
+                            <a href="/tag/%E6%96%87%E6%A1%A3/">文档</a>
+                        
+                            <a href="/tag/sql/">sql</a>
+                        
+                    </div>
+                
+                <div class="article-prev-next">
+                    
+                        <a href="/article/2039cc48/" class="prev-prefix">« </a> 上一篇：    <a href="/article/2039cc48/" title="发布于 2024-02-21 06:29">Druids文档</a>
+                        <br>
+                    
+                    
+                        <a href="/article/e255a10a/" class="next-prefix">» </a> 下一篇：    <a href="/article/e255a10a/" title="发布于 2024-02-15 09:25">计算机网络</a>
+                    
+                </div>
+            </div>
+            
+    <div class="article-comments">
+        
+            <div class="comments-title">
+                评论列表
+            </div>
+        
+        <div class="comments-content"></div>
+    </div>
+    
+ 
+        </div>
+    
+</div>
+    <div id="footer">
+    <div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>【人生若只如初见<span><i class='iconfont icon-like-fill'></i></span>何事秋风悲画扇】</div><div>&copy; 2020-2023 WorstOne. All Rights Reserved.</div>
+</div>
+    <div id="sidebar">
+    <div class="menu-wrap" style="display:none;">
+        
+            <div class="menu-notice">
+                <span class="iconfont icon-notice"></span>
+                <div class="notice">
+                    <span>简单地活着，肆意而又精彩！</span>
+                </div>
+            </div>
+        
+        <nav class="menu">
+            <div class="menu-introduce"> 
+                <div class="introduce-avatar">
+                    <img src="/image/sidebar/avatar.jpg">
+                </div> 
+                <div class="introduce-info"> 
+                    <div class="introduce-user">
+                        
+                            <a href="https://haoyv.site" target="_blank"><span>BLog for Haoyv</span></a>
+                        
+                    </div>
+                </div> 
+            </div> 
+            <div class="menu-list">
+                <ul>
+                    
+                        <li class=""><a href="/" class="" target="_self"><span class="iconfont icon-home-fill"></span>首页</a></li>
+                    
+                        <li class=""><a href="/category" class="" target="_self"><span class="iconfont icon-folder-fill"></span>分类</a></li>
+                    
+                        <li class=""><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
+                    
+                        <li class=""><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
+                    
+                        <li class=""><a href="/donate" class="" target="_self"><span class="iconfont icon-heart-fill"></span>赞赏</a></li>
+                    
+                        <li class=""><a href="/about" class="" target="_self"><span class="iconfont icon-about-fill"></span>关于</a></li>
+                    
+                        <li class=""><a href="/atom.xml" class="" target="_blank"><span class="iconfont icon-rss"></span>订阅</a></li>
+                    
+                        <li class=""><a href="javascript:;" class="search" target="_self"><span class="iconfont icon-search-menu"></span>搜索</a></li>
+                    
+                        <li class=""><a href="/comment" class="" target="_self"><span class="iconfont icon-comments-fill"></span>留言板</a></li>
+                    
+                        <li class=""><a href="/friend" class="" target="_self"><span class="iconfont icon-link"></span>友情链接</a></li>
+                    
+                </ul> 
+            </div> 
+            <div class="menu-link">
+                <div class="box">
+                    <div class="image-box"></div>
+                </div>
+                
+                    <a name="知乎" href="https://www.zhihu.com/people/3ppcet" class="" target="_blank" data=""><span class="iconfont icon-zhihu"></span></a>
+                
+                    <a name="微博" href="https://weibo.com/u/7903342994" class="" target="_blank" data=""><span class="iconfont icon-weibo"></span></a>
+                
+                    <a name="QQ" href="javascript:;" class="image" target="_self" data="/image/sidebar/qq.png"><span class="iconfont icon-qq"></span></a>
+                
+                    <a name="微信" href="javascript:;" class="" target="_self" data=""><span class="iconfont icon-wechat"></span></a>
+                
+                    <a name="GitHub" href="https://github.com/Hao-yv" class="" target="_blank" data=""><span class="iconfont icon-github"></span></a>
+                
+            </div> 
+        </nav>
+        <button class="menu-button-close"></button>
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+            </svg>
+        </div>
+    </div>
+    <button class="menu-button-open">MENU</button>
+    <div class="menu-cover"></div>
+</div>
+    <link type="text/css" rel="stylesheet" href="/css/search.css">
+<script type="text/javascript" src="/js/iscroll.js"></script>
+<script type="text/javascript" src="/js/instantsearch.min.js"></script>
+<div class="search-window">
+    <div class="search-content">
+        <div class="search-content-icon">
+            <i class="iconfont icon-search"></i>
+        </div>
+        <div id="search-input" class="search-input"></div>
+    </div>
+
+    <div class="search-scroll">
+        <div class="search-result">
+            <div id="search-stats" class="search-stats"></div>
+            <div id="search-hits"></div>
+            <div id="search-pagination" class="search-pagination"></div>
+        </div>
+    </div>
+
+    <span class="search-close-icon">
+        <i class="iconfont icon-close"></i>
+    </span>
+</div>
+    <div id="tools">
+    <div class="progressbar-top"></div>
+    
+    <link type="text/css" rel="stylesheet" href="/css/APlayer.css">
+    <script type="text/javascript" src="/js/APlayer.min.js"></script>
+    <script type="text/javascript" src="/js/Meting.min.js"></script>
+    <script>
+        var meting_api = 'https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+    </script>
+    <meting-js id="9301661017" lrcshow="false" server="netease" type="playlist" fixed="true" autoplay="false" loop="all" order="random" preload="auto" volume="0.67" mutex="true"></meting-js>
+
+    <div class="wrap-right">
+    <div class="wrap-right-hide">
+         <div class="wrap-right-button favorites">
+            <div class="iconbox" switch="false">
+                <span class="iconfont icon-favorites"></span>
+            </div>
+            <span class="icontext">关注</span>
+         </div>
+        <div class="wrap-right-button search">
+            <div class="iconbox">
+                <span class="iconfont icon-search-menu"></span>
+            </div>
+            <span class="icontext">搜索</span>
+        </div>
+        <div class="wrap-right-button menu-button">
+            <div class="iconbox">
+                <span class="iconfont icon-menu"></span>
+            </div>
+            <span class="icontext">菜单</span>
+        </div>
+        <div class="wrap-right-button mode">
+            <div class="light">
+                <div class="iconbox">
+                    <span class="iconfont icon-daymode"></span>
+                </div>
+                <span class="icontext">浅色模式</span>
+            </div>
+            <div class="dark">
+                <div class="iconbox">
+                    <span class="iconfont icon-nightmode-fill"></span>
+                </div>
+                <span class="icontext">深色模式</span>
+            </div>
+        </div>
+        <div class="wrap-right-button bottom">
+            <div class="iconbox">
+                <span class="iconfont icon-top"></span>
+            </div>
+            <span class="icontext">跳至底部</span>
+        </div>
+    </div>
+    <div class="wrap-right-show">
+        <div class="wrap-right-button set">
+            <div class="iconbox">
+                <span class="iconfont icon-setting"></span>
+            </div>
+            <span class="icontext">设置</span>
+        </div>
+        <div class="wrap-right-button top">
+            <div class="iconbox">
+                <span class="iconfont icon-top"></span>
+            </div>
+            <span class="icontext">返回顶部</span>
+        </div>
+    </div>
+</div>
+    <div class="loading"></div>
+</div>
+    <script>
+    window.config = {
+        GitHubUserName     : "Hao-yv",
+        GitHubRepositories : "Hexo-LiveForCode",
+
+        User             : "BLog for Haoyv",
+        UserAvatar       : "/image/sidebar/avatar.jpg",
+        WebsiteStartDate : "2024-02-14",
+        Home             : "https://haoyv.site",
+
+        WebsiteTitleBlur         : "Hi, Live For Code",
+        WebsiteTitleBlurTimeOut  : 500,
+        WebsiteTitleFocus        : "欢迎回来!",
+        WebsiteTitleFocusTimeOut : 1000,
+        WebsiteFavicon           : {
+            light : "/image/website/logo/logo.png",
+            dark  : "/image/website/logo/logo-dark.png"
+        },
+
+        ProgressBar : {
+            id       : "topProgressBar",
+            color    : "#77B6FF",
+            height   : "2px",
+            duration : 0.2
+        },
+
+        Loading: {
+            rebound : {
+                tension  : 16,
+                friction : 5
+            },
+            spinner : {
+                id     : "spinner",
+                radius : 90,
+                sides  : 3,
+                depth  : 4,
+                colors : {
+                    background : "#F0F0F0",
+                    stroke     : "#272633",
+                    base       : "",
+                    child      : "#272633"
+                },
+                alwaysForward : true,
+                restAt        : 0.5,
+                renderBase    : false
+            }
+        },
+
+        HomeHeaderAnimationRendered : true,
+        HomeHeaderAnimation         : {
+            radius      : 15,
+            density     : 0.2,
+            color       : "rgba(255, 255, 255, .2)",
+            clearOffset : 0.3
+        },
+
+        BackAnimationRendered          : true,
+        IEBrowserBackAnimationRendered : false,
+        BackAnimation                  : {
+            colorSaturation  : "60%",
+            colorBrightness  : "50%",
+            colorAlpha       : 0.5,
+            colorCycleSpeed  : 5,
+            verticalPosition : "random",
+            horizontalSpeed  : 200,
+            ribbonCount      : 3,
+            strokeSize       : 0,
+            parallaxAmount   : -0.2,
+            animateSections  : true
+        },
+
+        HomeHeaderImage : [
+            
+                "/image/header/home.jpg",
+            
+                "/image/header/back.jpg",
+            
+        ],
+        HomeBannerText  : "",
+
+        ArticleHeaderImage : [
+            
+                "/image/header/article.jpg",
+            
+        ],
+
+        OtherBannerText : "",
+
+        Error : {
+            icon    : "icon-swimming",
+            title   : "PAGE NOT FOUND",
+            content : [
+                
+                    "很抱歉，您访问的页面不存在！",
+                
+                    "可能是输入地址有误或该地址已变更。",
+                
+            ],
+            buttons : [
+                
+                    {
+                        icon  : "icon-home",
+                        text  : "返回首页",
+                        href  : "/",
+                        class : ""
+                    },
+                
+            ]
+        },
+
+        MenuNotice : {
+            enable : true,
+            notice : "简单地活着，肆意而又精彩！",
+            speed  : 20
+        },
+        MenuList : [
+            
+                {
+                    name   : "首页",
+                    icon   : "icon-home-fill",
+                    href   : "/",
+                    type   : "index",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "分类",
+                    icon   : "icon-folder-fill",
+                    href   : "/category",
+                    type   : "category",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "标签",
+                    icon   : "icon-discount-fill",
+                    href   : "/tag",
+                    type   : "tag",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "归档",
+                    icon   : "icon-calendar-fill",
+                    href   : "/archive",
+                    type   : "archive",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "赞赏",
+                    icon   : "icon-heart-fill",
+                    href   : "/donate",
+                    type   : "donate",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "关于",
+                    icon   : "icon-about-fill",
+                    href   : "/about",
+                    type   : "about",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "订阅",
+                    icon   : "icon-rss",
+                    href   : "/atom.xml",
+                    type   : "",
+                    class  : "",
+                    target : "_blank"
+                },
+            
+                {
+                    name   : "搜索",
+                    icon   : "icon-search-menu",
+                    href   : "javascript:;",
+                    type   : "",
+                    class  : "search",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "留言板",
+                    icon   : "icon-comments-fill",
+                    href   : "/comment",
+                    type   : "comment",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "友情链接",
+                    icon   : "icon-link",
+                    href   : "/friend",
+                    type   : "friend",
+                    class  : "",
+                    target : "_self"
+                },
+            
+        ],
+        MenuLink : [
+            
+                
+                    {
+                        name   : "知乎",
+                        icon   : "icon-zhihu",
+                        href   : "https://www.zhihu.com/people/3ppcet",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "微博",
+                        icon   : "icon-weibo",
+                        href   : "https://weibo.com/u/7903342994",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "QQ",
+                        icon   : "icon-qq",
+                        href   : "javascript:;",
+                        class  : "image",
+                        target : "_self",
+                        image  : "/image/sidebar/qq.png"
+                    },
+                
+                    {
+                        name   : "微信",
+                        icon   : "icon-wechat",
+                        href   : "javascript:;",
+                        class  : "",
+                        target : "_self",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "GitHub",
+                        icon   : "icon-github",
+                        href   : "https://github.com/Hao-yv",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+            
+        ],
+
+        FooterStyle : 2,
+        BottomText  : "<div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>【人生若只如初见<span><i class='iconfont icon-like-fill'></i></span>何事秋风悲画扇】</div><div>&copy; 2020-2023 WorstOne. All Rights Reserved.</div>",
+
+        ConsoleList : [
+            
+                
+                    [
+                        
+                            
+                                "Based on cnblogs theme SimpleMemory.",
+                            
+                                "",
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                "SimpleMemory Author:",
+                            
+                                "BNDong",
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                "Theme:",
+                            
+                                "LiveForCode",
+                            
+                        
+                    ],
+                
+            
+        ],
+
+        FontIconExtend : "",
+
+        Donate : {
+            paypal  : "",
+            bitcoin : "",
+            alipay  : "/image/donate/alipay.png",
+            wechat  : "/image/donate/wechat.png"
+        },
+
+        Search : {
+            applicationID : "77N4X2INOA",
+            apiKey        : "d08fd408b6a0c687d24f5ebd2efdc969",
+            indexName     : "My First Application",
+            hits          : {
+                page : 10
+            },
+            labels        : {
+                placeholder : "搜索",
+                empty       : "未发现与 「${query}」 相关的内容",
+                stats       : "${hits} 条相关条目，使用了 ${time} 毫秒",
+            }
+        }, 
+
+        Comment : {
+            switch : true,
+            type   : "Valine",
+        },
+
+        Waline : {
+            el              : ".comments-content",
+            serverURL       : "",
+            path            : window.location.pathname,
+            meta            : "['nick', 'mail', 'link']",
+            requiredMeta    : "['nick', 'mail']",
+            pageSize        : 10,
+            lang            : "zh-cn",
+            locale: {
+                admin       : "博主",
+                anonymous   : "匿名用户",
+                sofa        : "快来做第一个评论的人吧 ~",
+                placeholder : "你是我一生只会遇见一次的惊喜...",
+            },
+            dark            : "html[color-scheme='dark']",
+            search          : false,
+            pageview        : true,
+            comment         : true,
+            copyright       : false,
+        },
+
+        Valine : {
+            el             : ".comments-content",
+            appId          : "srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz",
+            appKey         : "8uVSP1q6UlALVC5igYfIfv2h",
+            serverURLs     : "",
+            placeholder    : "你是我一生只会遇见一次的惊喜...",
+            avatar         : "mm",
+            meta           : "nick,mail,link",
+            requiredFields : "nick,mail",
+            pageSize       : 5,
+            lang           : "zh-cn",
+            visitor        : true,
+            enableQQ       : true
+        },
+
+        Tocbot : {
+            switch                : true,
+            tocSelector           : ".toc",
+            contentSelector       : ".article-body",
+            headingSelector       : "h1, h2, h3, h4, h5",
+            headingsOffset        : 0,
+            scrollSmooth          : true,
+            scrollSmoothOffset    : -5,
+            positionFixedSelector : ".toc",
+            positionFixedClass    : "toc-fixed",
+            fixedSidebarOffset    : "",
+        },
+
+        Require : {
+            baseUrl     : "/js/",
+            waitSeconds : 100
+        },
+
+        Music : {
+            type : "Meting"
+        },
+        APlayer : {
+            container : ".aplayer",
+            fixed     : true,
+            autoplay  : false,
+            loop      : "all",
+            order     : "random",
+            preload   : "auto",
+            volume    : 0.67,
+            mutex     : true,
+            lrcType   : 3,
+            audio     : [
+                
+                    {
+                        name   : "Endless Tears",
+                        artist : "CLIFF EDGE",
+                        cover  : "/music/cover/Endless Tears.jpg",
+                        url    : "/music/song/Endless Tears.mp3",
+                        lrc    : "/music/lrc/Endless Tears.lrc"
+                    },
+                
+            ]
+        },
+        Meting : {
+            api      : "https://api.i-meto.com/meting/api",
+            id       : "9301661017", 
+            lrcshow  : false, 
+            server   : "netease", 
+            type     : "playlist", 
+            fixed    : true, 
+            autoplay : false, 
+            loop     : "all", 
+            order    : "random", 
+            preload  : "auto", 
+            volume   : 0.67, 
+            mutex    : true
+        },
+
+        Mouse : {
+            enable  : true,
+            options : {
+                size  : 6,
+                sizeF : 24
+            }
+        },
+
+        LazyLoad : {
+            default : "/image/website/lazyload.svg"
+        },
+  
+        Style : {
+            aplayer          : "/css/APlayer.css",
+            archive          : "/css/archive.css",
+            base             : "/css/base.css",
+            clipboard        : "/css/clipboard.css",
+            code             : "/css/code.css",
+            donate           : "/css/donate.css",
+            fancybox         : "/css/jquery.fancybox.css",
+            footer           : "/css/footer.css",
+            iconfont         : "/iconfont/iconfont.css",
+            index            : "/css/index.css",
+            menuBubble       : "/css/menu-bubble.css",
+            mouse            : "/css/mouse.css",
+            page             : "/css/page.css",
+            post             : "/css/post.css",
+            search           : "/css/search.css",
+            tocbot           : "/css/tocbot.css",
+            valine           : "/css/valine.css",
+            waline           : "/css/waline.css",
+            walineCustom     : "/css/waline-custom.css"
+        },
+
+        Script: {
+            aplayer          : "/js/APlayer.min.js",
+            config           : "/js/require.config.js",
+            index            : "/js/index.js",
+            instantSearch    : "/js/instantsearch.min.js",
+            iscroll          : "/js/iscroll.js",
+            jQuery           : "/js/jquery-3.4.1.min.js",
+            loading          : "/js/loading.js",
+            meting           : "/js/Meting.min.js",
+            require          : "/js/require.min.js",
+            waline           : "/js/waline.mjs",
+            pageview         : "/js/pageview.mjs",
+            comment          : "/js/comment.mjs",
+        },
+
+        Font: {
+            LongCang    : "/font/LongCang.css",
+            Monda       : "/font/Monda.css",
+            NotoSansSC  : "/font/NotoSansSC.css",
+            NotoSerifSC : "/font/NotoSerifSC.css",
+            Playball    : "/font/Playball.css",
+            PTMono      : "/font/PTMono.css",
+            Roboto      : "/font/Roboto.css",
+            RobotoSlab  : "/font/RobotoSlab.css",
+            Rosario     : "/font/Rosario.css",
+            UbuntuMono  : "/font/UbuntuMono.css"
+        },
+
+        Suffix : {
+            about : "简单地活着, 肆意又精彩."
+        },
+            
+        Theme : {
+            url  : "https://github.com/first19326/Hexo-LiveForCode",
+            name : "Hexo - Live For Code"
+        }  
+    };
+</script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>
