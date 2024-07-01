@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <title>
         
-            归档
+            
         
     </title>
     <link rel="shortcut icon" href="#"/>
@@ -33,15 +33,32 @@
 </head>
 <body>
     <a id="cover"></a>
-    <link type="text/css" rel="stylesheet" href="/css/archive.css">
+    <link type="text/css" rel="stylesheet" href="/css/post.css">
 <div id="header" class="header">
     <div class="vertical">
         <div class="inner">
             
-                <h1 class="header-subtitle">归档</h1>
+                <h1 class="header-subtitle"></h1>
                 <div class="header-subinfo">
-                    <p class="article-info-text Chinese"></p>
-                    <p class="article-info-text English"></p>                  
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2024-07-01
+                        </span>
+                        
+                            
+                                <span id="/article/0/" class="leancloud_visitors" data-flag-title="">
+                                    <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                                </span>
+                            
+                            
+                                <span>
+                                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/article/0/"></span>
+                                </span>
+                              
+                        
+                    </p>
+                    
+                    
                 </div>
             
         </div>
@@ -50,117 +67,138 @@
 </div>
 <div id="container">
     
-        
-            <!-- 归档页面、分类归档页面、标签归档页面 -->
-            <div class="articles">
-                <div class="articles-wrap">
-                    <span class="archive-move-on"></span>
-                    <span class="archive-counter">
-                        
-                            目前共计 10 篇日志，继续加油！
-                        
-                    </span>
+        <!-- 文章页面 -->
+        <div id="article">
+            <div class="toc"></div>
+            <div class="article-body">
+                <h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><h4 id="简答部分"><a href="#简答部分" class="headerlink" title="简答部分"></a>简答部分</h4><h5 id="进程转换图"><a href="#进程转换图" class="headerlink" title="进程转换图"></a>进程转换图</h5><p><img src="https://cdn.nlark.com/yuque/0/2024/jpeg/39102220/1717832705498-34df657d-f2e2-44bc-a510-57284ebea55a.jpeg#averageHue=%23fefcf6&clientId=u2a528d62-88e2-4&id=nAGDa&originHeight=440&originWidth=1056&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u4922bc20-71ba-4dd8-b6b1-5cddb08e210&title="></p>
+<h5 id="进程调度算法及思想"><a href="#进程调度算法及思想" class="headerlink" title="进程调度算法及思想"></a>进程调度算法及思想</h5><ol>
+<li>先来先服务算法（FCFS）</li>
+</ol>
+<p>算法思想：从公平角度考虑，按照进程到达的先后顺序进行调度</p>
+<ol start="2">
+<li>短作业优先算法（SJF）</li>
+</ol>
+<p>算法思想：使要求服务时间最短的进程优先得到服务，追求最少的平均等待时间，最少周转时间和最少平均带权周转时间</p>
+<ol start="3">
+<li>高xiang y比优先算法（HRRN）</li>
+</ol>
+<p>算法思想：综合考虑进程的等待时间，每次进行调度时，先计算各个进程的相应比，选择相应比高的进程为其服务</p>
+<h5 id="用户程序处理三阶段"><a href="#用户程序处理三阶段" class="headerlink" title="用户程序处理三阶段"></a>用户程序处理三阶段</h5><ol>
+<li>编译：将用户源代码编译成若干目标模块</li>
+<li>链接：将编译后形成的目标代码及他们所需库函数连接在一起，形成一个装入模块</li>
+<li>装入：由装入程序将装入模块装入内存</li>
+</ol>
+<h5 id="用户文件按照用途分类"><a href="#用户文件按照用途分类" class="headerlink" title="用户文件按照用途分类"></a>用户文件按照用途分类</h5><ol>
+<li>系统文件</li>
+<li>库文件</li>
+<li>用户文件</li>
+</ol>
+<h5 id="常用动态分区分配算法"><a href="#常用动态分区分配算法" class="headerlink" title="常用动态分区分配算法"></a>常用动态分区分配算法</h5><ol>
+<li>首次适应算法</li>
+<li>最佳适应算法</li>
+<li>最坏适应算法</li>
+<li>临近适应算法</li>
+</ol>
+<h5 id="公共缓冲池中缓冲区4种工作方式"><a href="#公共缓冲池中缓冲区4种工作方式" class="headerlink" title="公共缓冲池中缓冲区4种工作方式"></a>公共缓冲池中缓冲区4种工作方式</h5><ol>
+<li>收容输入</li>
+<li>提取输入</li>
+<li>收容输出</li>
+<li>提取输出</li>
+</ol>
+<h5 id="具有挂起状态的进程转换图"><a href="#具有挂起状态的进程转换图" class="headerlink" title="具有挂起状态的进程转换图"></a>具有挂起状态的进程转换图</h5><p><img src="https://img-blog.csdnimg.cn/20191101103135791.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM0NjY2ODU3,size_16,color_FFFFFF,t_70#id=WhVnX&originHeight=748&originWidth=948&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h5 id="目标程序装入内存的方式"><a href="#目标程序装入内存的方式" class="headerlink" title="目标程序装入内存的方式"></a>目标程序装入内存的方式</h5><ol>
+<li>绝对装入</li>
+<li>可重定位装入</li>
+<li>动态运行时装入</li>
+</ol>
+<h5 id="文件共享保护机制"><a href="#文件共享保护机制" class="headerlink" title="文件共享保护机制"></a>文件共享保护机制</h5><ol>
+<li>口令保护：要求用户在访问文件时必须提供口令</li>
+<li>密码保护：文件进行加密，在访问时需要提供正确的密码才能对文件进行正确的解密</li>
+<li>访问控制：在每个文件的FCB中增加一个<strong>访问控制表ACL</strong>，记录各个用户可对该文件执行哪些操作</li>
+</ol>
+<h5 id="死锁产生必要条件"><a href="#死锁产生必要条件" class="headerlink" title="死锁产生必要条件"></a>死锁产生必要条件</h5><ol>
+<li>互斥条件</li>
+<li>不可剥夺条件</li>
+<li>请求和保持条件</li>
+<li>循环等待条件</li>
+</ol>
+<h5 id="磁盘调度算法"><a href="#磁盘调度算法" class="headerlink" title="磁盘调度算法"></a>磁盘调度算法</h5><ol>
+<li>先来先服务算法</li>
+<li>最短寻道时间优先算法</li>
+<li>电梯算法</li>
+<li>循环扫描算法</li>
+</ol>
+<h5 id="进程基本状态及其转换关系"><a href="#进程基本状态及其转换关系" class="headerlink" title="进程基本状态及其转换关系"></a>进程基本状态及其转换关系</h5><p>进程基本状态：就绪态、阻塞态、执行态</p>
+<ol>
+<li>处于就绪态的进程，当调度程序为其分配处理机后，变为执行态</li>
+<li>处于执行态的进程，当系统为其分配的时间片用完后推出处理机，变为就绪态</li>
+<li>处于执行态的进程，当其有用某种原因无法继续执行时，变为阻塞态</li>
+<li>处于阻塞态的进程，当其等待事件完毕后，变为就绪态</li>
+</ol>
+<h5 id="程序链接方式"><a href="#程序链接方式" class="headerlink" title="程序链接方式"></a>程序链接方式</h5><ol>
+<li>静态链接</li>
+<li>装入时动态链接</li>
+<li>运行时动态链接</li>
+</ol>
+<h5 id="死锁检测时发生死锁的检测方式"><a href="#死锁检测时发生死锁的检测方式" class="headerlink" title="死锁检测时发生死锁的检测方式"></a>死锁检测时发生死锁的检测方式</h5><ol>
+<li>资源剥夺法</li>
+<li>撤销进程法</li>
+<li>进程回退法</li>
+</ol>
+<h5 id="操作系统为用户提供的接口"><a href="#操作系统为用户提供的接口" class="headerlink" title="操作系统为用户提供的接口"></a>操作系统为用户提供的接口</h5><ol>
+<li>命令行接口</li>
+<li>图形界面接口</li>
+<li>应用程序编程接口</li>
+</ol>
+<h4 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h4><p>对换：系统把所有用户作业放入磁盘，每次只能调用一个作业到内存，作业完成时调至外存，再将外存的另一个作业调入<br>作业：用户在一次解题或一个事物处理过程中要求计算机所做所有工作的集合<br>缓冲区：指通信双方不直接通信，而是通过一个缓冲器中转<br>批处理系统：用户将作业提交给操作系统后不再干预，由操作系统控制他们自己运行<br>虚拟存储器：具有请求调出功能和置换功能，并能从逻辑上对空间进行扩容<br>实时操作系统：对信息进行实时处理的系统<br>原语：由若干条指令组成的程序段，用来实现某个功能，在程序执行过程中不可被中断<br>处理机调度：从就绪队列中按照一定算法选择一个进程，并将处理机分配给它运行<br>进程并发性：两个或多个事件在同一时间间隔内发生，这些事件在宏观上同时发生，但在微观上是交替发生的<br>文件控制块：操作系统为管理文件而设置的一组具有固定格式的数据结构，存放管理文件所需的所有属性信息<br>信号量：也叫做信号灯，它是在信号量同步机制中用于实现进程的同步和互斥的有效数据结构<br>重定位：链接地址跟运行地址不同的情况下，执行一段位置无关码</p>
+
+                
+                <p class="end">__END__</p>
+            </div>
+            <div class="article-footer">
+                <div class="suffix-box">
+    <div class="suffix-box-left">
+        <img src="/image/sidebar/avatar.jpg" alt="BLog for Haoyv">
+    </div>
+    <div class="suffix-box-right">
+        <span class="suffix-box-title">文章作者：</span>BLog for Haoyv
+        <br>
+        <span class="suffix-box-title">文章出处：</span><a href="/article/0/" target="_blank"></a>
+        <br>
+        <span class="suffix-box-title">作者签名：</span>简单地活着, 肆意又精彩.
+        <br>
+        <span class="suffix-box-title">关于主题：</span><a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - Live For Code</a>
+        <br>
+        <span class="suffix-box-title">版权声明：</span>文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+        <br>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+                
+                
+                <div class="article-prev-next">
+                    
+                        <a href="/article/0/" class="prev-prefix">« </a> 上一篇：    <a href="/article/0/" title="发布于 2024-07-01 10:37"></a>
+                        <br>
                     
                     
-                        
-                            <div class="archive-title">
-                                <h2 class="archive-year">2024</h2>
-                            </div>
-                            
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/article/0/"><span></span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">07-01</span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/article/0/"><span></span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">07-01</span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/article/cb13802c/"><span>HTML文档</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">03-18</span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/article/4c4e7025/"><span>JDBC文档</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">02-21</span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/article/2039cc48/"><span>Druids文档</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">02-21</span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/article/c88f20d/"><span>SQL文档</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">02-17</span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/article/e255a10a/"><span>计算机网络</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">02-15</span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/article/18136/"><span>MarkDown基本语法</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">02-14</span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/article/16107/"><span>Hello World</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">02-13</span>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="/article/cb13802c/" class="next-prefix">» </a> 下一篇：    <a href="/article/cb13802c/" title="发布于 2024-03-18 08:27">HTML文档</a>
                     
                 </div>
             </div>
             
+    <div class="article-comments">
         
+            <div class="comments-title">
+                评论列表
+            </div>
+        
+        <div class="comments-content"></div>
+    </div>
+    
+ 
+        </div>
     
 </div>
     <div id="footer">
@@ -198,7 +236,7 @@
                     
                         <li class=""><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
                     
-                        <li class=" active "><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
+                        <li class=""><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
                     
                         <li class=""><a href="/donate" class="" target="_self"><span class="iconfont icon-heart-fill"></span>赞赏</a></li>
                     
