@@ -3,11 +3,11 @@
   <title>BLog for Haoyv</title>
   
   <subtitle>简单记录学习日常</subtitle>
-  <link href="http://hao-yv.github.io/atom.xml" rel="self"/>
+  <link href="http://blog.haoyv.site/atom.xml" rel="self"/>
   
-  <link href="http://hao-yv.github.io/"/>
+  <link href="http://blog.haoyv.site/"/>
   <updated>2024-10-03T14:47:54.635Z</updated>
-  <id>http://hao-yv.github.io/</id>
+  <id>http://blog.haoyv.site/</id>
   
   <author>
     <name>Haoyv</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>wen11专业版重置系统后安全中心无法打开处理方法</title>
-    <link href="http://hao-yv.github.io/article/90881e5b/"/>
-    <id>http://hao-yv.github.io/article/90881e5b/</id>
+    <link href="http://blog.haoyv.site/article/90881e5b/"/>
+    <id>http://blog.haoyv.site/article/90881e5b/</id>
     <published>2024-10-01T07:02:40.569Z</published>
     <updated>2024-10-03T14:47:54.635Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="文档" scheme="http://hao-yv.github.io/category/%E6%96%87%E6%A1%A3/"/>
+    <category term="文档" scheme="http://blog.haoyv.site/category/%E6%96%87%E6%A1%A3/"/>
     
     
-    <category term="文档" scheme="http://hao-yv.github.io/tag/%E6%96%87%E6%A1%A3/"/>
+    <category term="文档" scheme="http://blog.haoyv.site/tag/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title>软件工程</title>
-    <link href="http://hao-yv.github.io/article/7821ac43/"/>
-    <id>http://hao-yv.github.io/article/7821ac43/</id>
+    <link href="http://blog.haoyv.site/article/7821ac43/"/>
+    <id>http://blog.haoyv.site/article/7821ac43/</id>
     <published>2024-07-01T02:37:06.194Z</published>
     <updated>2024-07-01T02:52:57.563Z</updated>
     
@@ -58,17 +58,17 @@
     
     
     
-    <category term="软件工程" scheme="http://hao-yv.github.io/category/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
+    <category term="软件工程" scheme="http://blog.haoyv.site/category/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/"/>
     
     
-    <category term="文档" scheme="http://hao-yv.github.io/tag/%E6%96%87%E6%A1%A3/"/>
+    <category term="文档" scheme="http://blog.haoyv.site/tag/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title>操作系统</title>
-    <link href="http://hao-yv.github.io/article/d04bd5bc/"/>
-    <id>http://hao-yv.github.io/article/d04bd5bc/</id>
+    <link href="http://blog.haoyv.site/article/d04bd5bc/"/>
+    <id>http://blog.haoyv.site/article/d04bd5bc/</id>
     <published>2024-07-01T02:35:43.640Z</published>
     <updated>2024-07-01T03:16:27.649Z</updated>
     
@@ -82,17 +82,17 @@
     
     
     
-    <category term="操作系统" scheme="http://hao-yv.github.io/category/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="操作系统" scheme="http://blog.haoyv.site/category/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-    <category term="文档" scheme="http://hao-yv.github.io/tag/%E6%96%87%E6%A1%A3/"/>
+    <category term="文档" scheme="http://blog.haoyv.site/tag/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title>HTML文档</title>
-    <link href="http://hao-yv.github.io/article/cb13802c/"/>
-    <id>http://hao-yv.github.io/article/cb13802c/</id>
+    <link href="http://blog.haoyv.site/article/cb13802c/"/>
+    <id>http://blog.haoyv.site/article/cb13802c/</id>
     <published>2024-03-18T00:27:24.857Z</published>
     <updated>2024-04-02T15:32:50.332Z</updated>
     
@@ -103,19 +103,19 @@
     
     
     
-    <category term="前端" scheme="http://hao-yv.github.io/category/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="http://blog.haoyv.site/category/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="HTML" scheme="http://hao-yv.github.io/category/%E5%89%8D%E7%AB%AF/HTML/"/>
+    <category term="HTML" scheme="http://blog.haoyv.site/category/%E5%89%8D%E7%AB%AF/HTML/"/>
     
     
-    <category term="文档" scheme="http://hao-yv.github.io/tag/%E6%96%87%E6%A1%A3/"/>
+    <category term="文档" scheme="http://blog.haoyv.site/tag/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title>JDBC文档</title>
-    <link href="http://hao-yv.github.io/article/4c4e7025/"/>
-    <id>http://hao-yv.github.io/article/4c4e7025/</id>
+    <link href="http://blog.haoyv.site/article/4c4e7025/"/>
+    <id>http://blog.haoyv.site/article/4c4e7025/</id>
     <published>2024-02-21T10:29:10.447Z</published>
     <updated>2024-02-21T10:36:56.343Z</updated>
     
@@ -126,17 +126,17 @@
     
     
     
-    <category term="JDBC工具类" scheme="http://hao-yv.github.io/category/JDBC%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+    <category term="JDBC工具类" scheme="http://blog.haoyv.site/category/JDBC%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
     
     
-    <category term="文档" scheme="http://hao-yv.github.io/tag/%E6%96%87%E6%A1%A3/"/>
+    <category term="文档" scheme="http://blog.haoyv.site/tag/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title>Druids文档</title>
-    <link href="http://hao-yv.github.io/article/2039cc48/"/>
-    <id>http://hao-yv.github.io/article/2039cc48/</id>
+    <link href="http://blog.haoyv.site/article/2039cc48/"/>
+    <id>http://blog.haoyv.site/article/2039cc48/</id>
     <published>2024-02-21T10:29:10.445Z</published>
     <updated>2024-02-21T11:03:31.917Z</updated>
     
@@ -147,17 +147,17 @@
     
     
     
-    <category term="Druids工具类" scheme="http://hao-yv.github.io/category/Druids%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+    <category term="Druids工具类" scheme="http://blog.haoyv.site/category/Druids%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
     
     
-    <category term="文档" scheme="http://hao-yv.github.io/tag/%E6%96%87%E6%A1%A3/"/>
+    <category term="文档" scheme="http://blog.haoyv.site/tag/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title>SQL文档</title>
-    <link href="http://hao-yv.github.io/article/c88f20d/"/>
-    <id>http://hao-yv.github.io/article/c88f20d/</id>
+    <link href="http://blog.haoyv.site/article/c88f20d/"/>
+    <id>http://blog.haoyv.site/article/c88f20d/</id>
     <published>2024-02-17T01:25:51.000Z</published>
     <updated>2024-02-19T14:13:43.142Z</updated>
     
@@ -171,19 +171,19 @@
     
     
     
-    <category term="文档" scheme="http://hao-yv.github.io/category/%E6%96%87%E6%A1%A3/"/>
+    <category term="文档" scheme="http://blog.haoyv.site/category/%E6%96%87%E6%A1%A3/"/>
     
     
-    <category term="文档" scheme="http://hao-yv.github.io/tag/%E6%96%87%E6%A1%A3/"/>
+    <category term="文档" scheme="http://blog.haoyv.site/tag/%E6%96%87%E6%A1%A3/"/>
     
-    <category term="sql" scheme="http://hao-yv.github.io/tag/sql/"/>
+    <category term="sql" scheme="http://blog.haoyv.site/tag/sql/"/>
     
   </entry>
   
   <entry>
     <title>计算机网络</title>
-    <link href="http://hao-yv.github.io/article/e255a10a/"/>
-    <id>http://hao-yv.github.io/article/e255a10a/</id>
+    <link href="http://blog.haoyv.site/article/e255a10a/"/>
+    <id>http://blog.haoyv.site/article/e255a10a/</id>
     <published>2024-02-15T01:25:51.000Z</published>
     <updated>2024-09-02T01:07:10.941Z</updated>
     
@@ -198,19 +198,19 @@
     
     
     
-    <category term="网络" scheme="http://hao-yv.github.io/category/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="http://blog.haoyv.site/category/%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="网络" scheme="http://hao-yv.github.io/tag/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="http://blog.haoyv.site/tag/%E7%BD%91%E7%BB%9C/"/>
     
-    <category term="期末" scheme="http://hao-yv.github.io/tag/%E6%9C%9F%E6%9C%AB/"/>
+    <category term="期末" scheme="http://blog.haoyv.site/tag/%E6%9C%9F%E6%9C%AB/"/>
     
   </entry>
   
   <entry>
     <title>MarkDown基本语法</title>
-    <link href="http://hao-yv.github.io/article/18136/"/>
-    <id>http://hao-yv.github.io/article/18136/</id>
+    <link href="http://blog.haoyv.site/article/18136/"/>
+    <id>http://blog.haoyv.site/article/18136/</id>
     <published>2024-02-14T15:23:48.000Z</published>
     <updated>2024-02-15T01:48:33.143Z</updated>
     
@@ -226,14 +226,14 @@
     
     
     
-    <category term="文档" scheme="http://hao-yv.github.io/tag/%E6%96%87%E6%A1%A3/"/>
+    <category term="文档" scheme="http://blog.haoyv.site/tag/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://hao-yv.github.io/article/16107/"/>
-    <id>http://hao-yv.github.io/article/16107/</id>
+    <link href="http://blog.haoyv.site/article/16107/"/>
+    <id>http://blog.haoyv.site/article/16107/</id>
     <published>2024-02-13T03:42:10.391Z</published>
     <updated>2024-02-13T06:52:06.975Z</updated>
     
@@ -252,8 +252,8 @@
   
   <entry>
     <title>计算机网络 - 传输层</title>
-    <link href="http://hao-yv.github.io/article/4210326288/"/>
-    <id>http://hao-yv.github.io/article/4210326288/</id>
+    <link href="http://blog.haoyv.site/article/4210326288/"/>
+    <id>http://blog.haoyv.site/article/4210326288/</id>
     <published>2020-09-20T16:00:00.000Z</published>
     <updated>2024-02-15T14:24:47.008Z</updated>
     
@@ -264,10 +264,10 @@
     
     
     
-    <category term="网络" scheme="http://hao-yv.github.io/category/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="http://blog.haoyv.site/category/%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="网络" scheme="http://hao-yv.github.io/tag/%E7%BD%91%E7%BB%9C/"/>
+    <category term="网络" scheme="http://blog.haoyv.site/tag/%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
