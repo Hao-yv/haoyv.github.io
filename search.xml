@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>wen11专业版重置系统后安全中心无法打开处理方法</title>
+      <link href="/article/90881e5b/"/>
+      <url>/article/90881e5b/</url>
+      
+        <content type="html"><![CDATA[<p>在win11专业版系统重装的情况下打开安全中心时，可能会弹出“页面不可用”的弹框（如下图所示），这时由于win11专业版本身并没有<strong>安全中心</strong>这一功能，在系统重置时原有的安全中心被删除。可通过手动重装安全中心的方式解决</p><p><img src="https://i-blog.csdnimg.cn/blog_migrate/30d060d0b97c99d15c7893307c623f60.png"></p><p>通过键盘<span style="color:red"> win + r</span>打开windows系统的运行窗口,输入<span style="color:red">winver</span>查看并记住当前系统版本号</p><center class="half"><img src="https://img.picui.cn/free/2024/10/01/66fb96c2aab9a.png" width=400px/><img src="https://img.picui.cn/free/2024/10/01/66fb96de1628b.png" width=400px/></center><p>进入<a href="https://uupdump.net/">UUP dump网站</a> ，选在你电脑的系统版本号（以 <span style="color: red"><strong>23H2</strong></span>版本为例子）</p><p><img src="https://img.picui.cn/free/2024/10/01/66fb936a47646.png" alt="1727763472661.png"></p><p>选中后进入以下界面：<br><img src="https://img.picui.cn/free/2024/10/01/66fb950fb8cfe.png" alt="1727763909933.png"></p><p>点击对应版本号进入跳转页面后在<strong>搜索文件</strong>中输入<span style="color:red">Microsoft.SecHealthUI_8wekyb3d8bbwe.appx </span>之后点击搜索，并下载对应文件</p><p><img src="https://img.picui.cn/free/2024/10/01/66fb99d423e99.png" alt="1727765132385.png"><img src="https://img.picui.cn/free/2024/10/01/66fb9b4096009.png" alt="1727765497140.png"></p><p>文件下载时，可能会提示文件无法下载，此时可点击下载旁边的三个点，点击保留，选择<span style="color:red">仍然保留</span></p><p><img src="https://img.picui.cn/free/2024/10/01/66fb9c589ae34.png" alt="1727765777422.png"></p><p>下载成功后，为下载文件重命名，添加尾缀<span style="color:red"><strong>.appx</strong></span>，随后双击打开，点击重新安装，重新安装后即可打开安全中心</p><p><img src="https://img.picui.cn/free/2024/10/01/66fb9d85acf8b.png" alt="1727766078776.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 文档 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 文档 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软件工程</title>
       <link href="/article/7821ac43/"/>
       <url>/article/7821ac43/</url>
